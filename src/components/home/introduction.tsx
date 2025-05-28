@@ -5,7 +5,7 @@ export default function Introduction() {
     <main className="bg-white text-black my-10">
       <section className="mx-auto w-full px-8 lg:max-w-7xl 2xl:max-w-9xl relative">
         <div className="mb-8 flex items-center gap-2 text-sm">
-          <span className="text-[#003262] xl:absolute -left-10">/02</span>
+          <span className="text-[#003262] xl:absolute -left-12">/02</span>
           <span className="text-[#003262] mx-2">/</span>
           <span className="text-[#003262]">Introduction</span>
         </div>

@@ -34,7 +34,7 @@ export default function ArticlesInsights() {
   return (
     <div className="w-full px-8  mx-auto lg:max-w-7xl 2xl:max-w-9xl relative my-10">
       <div className="flex text-sm text-[#003262] mb-6">
-        <span className="xl:absolute -left-10">/ 04</span>
+        <span className="xl:absolute -left-12">/ 04</span>
         <span className="mx-2">/</span>
         <span>Articles</span>
       </div>

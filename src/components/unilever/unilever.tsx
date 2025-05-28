@@ -7,7 +7,7 @@ export function CaseStudyPage() {
       <div className="md:px-6 py-8">
         <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto  relative">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 pl-5">
-            <span className="xl:absolute -left-10">/ 02</span>
+            <span className="xl:absolute -left-12">/ 02</span>
             <span className="mx-2">/</span>
             <span className="text-lg font-semibold">Case Study</span>
           </div>
@@ -153,7 +153,7 @@ export function CaseStudyPage() {
       <div className="bg-gray-100 py-16 px-6 hidden md:block">
         <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto ">
           <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-10">/ 02</span>
+            <span className="xl:absolute -left-12">/ 02</span>
             <span className="mx-2">/</span>
             <span className="text-lg font-semibold">What Our Clients Say</span>
           </div>

@@ -18,7 +18,7 @@ export function PrivacyPolicy() {
       {/* Privacy Policy Content */}
       <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl text-sm mx-auto px-2 md:px-6 py-12 relative">
         <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
-          <span className="xl:absolute -left-10">/ 01</span>
+          <span className="xl:absolute -left-12">/ 01</span>
           <span className="mx-2">/</span>
           <span className="text-lg font-semibold">Legal page</span>
         </div>

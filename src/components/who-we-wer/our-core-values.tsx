@@ -41,7 +41,7 @@ export default function CoreValues() {
       <div className="w-full mx-auto px-8 lg:max-w-7xl 2xl:max-w-9xl relative mt-10">
         <div className="mb-12">
           <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-10">/ 02</span>
+            <span className="xl:absolute -left-12">/ 02</span>
             <span className="mx-2">/</span>
             <span className="text-lg font-semibold">Our Core Values</span>
           </div>

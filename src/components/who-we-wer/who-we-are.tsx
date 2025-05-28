@@ -6,7 +6,7 @@ export default function WhoWeAre() {
         <div className="">
           {/* Mobile Section Header */}
           <div className="text-[#84CC16] mb-2 md:mb-4 flex items-center gap-2 pl-8">
-            <span className="xl:absolute -left-10">/ 01</span>
+            <span className="xl:absolute -left-12">/ 01</span>
             <span className="mx-2">/</span>
             <span className="text-sm">Who We Are</span>
           </div>

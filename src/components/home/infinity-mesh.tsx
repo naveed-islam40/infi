@@ -5,7 +5,7 @@ export default function InFinityMesh() {
       <div className="w-full mx-auto px-8 lg:max-w-7xl 2xl:max-w-9xl flex flex-col md:flex-row items-center justify-between relative">
         <div className="z-10">
           <div className="text-[#84CC16] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-10">/ 01</span>
+            <span className="xl:absolute -left-12">/ 01</span>
             <span className="mx-2">/</span>
             <span className="text-sm">Infinity Mesh</span>
           </div>
