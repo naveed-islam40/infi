@@ -1,0 +1,35 @@
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "./components/home";
+import Footer from "./components/footer/footer";
+import WhoWeAreMain from "./components/who-we-wer";
+import WhatWeDoMain from "./components/what-we-do";
+import ArticlesList from "./components/articles-listing";
+import ArticlesDetails from "./components/article-details";
+import OurWorkCase from "./components/work-case";
+import Unilever from "./components/unilever";
+import { ContactForm } from "./components/contact";
+import { PrivacyPolicy } from "./components/privacy-policy";
+import Navbar from "./components/navbar";
+
+const App = () => {
+  const { pathname } = useLocation();
+  return (
+    <div className="">
+      {pathname !== "/contact" && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/who-we-are" element={<WhoWeAreMain />} />
+        <Route path="/what-we-do" element={<WhatWeDoMain />} />
+        <Route path="/articles-list" element={<ArticlesList />} />
+        <Route path="/article-details/:id" element={<ArticlesDetails />} />
+        <Route path="/our-work" element={<OurWorkCase />} />
+        <Route path="/work-case/:id" element={<Unilever />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+      {pathname !== "/contact" && <Footer />}
+    </div>
+  );
+};
+
+export default App;
