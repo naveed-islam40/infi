@@ -72,7 +72,7 @@ export default function ArticlesInsights() {
       </div>
 
       <div className="flex justify-start md:justify-end mt-8">
-        <Link to="/articles" className="flex items-center text-[#003262]">
+        <Link to="/articles-list" className="flex items-center text-[#003262]">
           Explore Articles
           <img src="/svg/Property 54.svg" alt="Arrow Right" className="ml-1" />
         </Link>
