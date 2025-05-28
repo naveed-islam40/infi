@@ -8,7 +8,7 @@ const OurTrackRecord = () => {
         <div className="mb-12 space-y-8">
           {/* Section Title */}
           <div className="text-[#003262] flex items-center gap-2 text-sm md:text-base">
-            <span className="xl:absolute -left-12">/ 02</span>
+            <span className="xl:absolute -left-7">/ 02</span>
             <span>/</span>
             <span className="text-lg font-semibold">Our Track Record</span>
           </div>

@@ -45,7 +45,7 @@ export function WorkSection() {
         <div className="mb-12">
           <div className="mb-12">
             <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
-              <span className="xl:absolute -left-12">/ 01</span>
+              <span className="xl:absolute -left-7">/ 01</span>
               <span className="mx-2">/</span>
               <span className="text-lg font-semibold">Work</span>
             </div>
