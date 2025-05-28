@@ -41,8 +41,8 @@ export default function EndToEndProductDetails() {
           />
 
           {/* Right side - Text content */}
-          <div>
-            <p className="text-gray-600 text-sm md:text-lg order-1 md:order-2 leading-relaxed">
+          <div className="order-1 md:order-2">
+            <p className="text-gray-600 text-sm md:text-lg  leading-relaxed">
               We help turn your ideas into working digital solutions, starting
               with expert IT consulting and rapid prototyping to quickly
               validate concepts. From there, we design tailored solutions and
