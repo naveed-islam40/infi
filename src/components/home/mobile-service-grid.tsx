@@ -1,7 +1,7 @@
 export function MobileServiceGrid() {
   return (
     <div className="w-full min-h-screen bg-gray-50 p-6">
-      <div className="max-w-sm mx-auto bg-gray-50">
+      <div className="max-w-lg mx-auto bg-gray-50">
         {/* Header with number and arrow */}
         <div className="flex justify-between items-start mb-8">
           <div className="text-6xl font-bold text-[#84CC16]">01</div>

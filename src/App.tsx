@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/home";
 import Footer from "./components/footer/footer";
-import WhoWeAreMain from "./components/who-we-wer";
+import WhoWeAreMain from "./components/who-we-are";
 import WhatWeDoMain from "./components/what-we-do";
 import ArticlesList from "./components/articles-listing";
 import ArticlesDetails from "./components/article-details";

@@ -1,19 +1,20 @@
+import { Instagram } from "lucide-react";
 import type React from "react";
 
 import { useState } from "react";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import AnimateButton from "../general-components/animate-button";
 
 export default function BlogSidebar() {
   const [email, setEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
-    console.log("Subscribing email:", email);
     setEmail("");
   };
 
   return (
-    <div className="bg-white md:p-6 space-y-8 ">
+    <div className="bg-white md:p-6 space-y-8 sticky top-0">
       {/* Author Profile Section */}
       <div className="flex items-start space-x-4 border-b border-gray-200 pb-4">
         <div className="relative">
@@ -47,22 +48,23 @@ export default function BlogSidebar() {
           </p>
         </div>
 
-        <form onSubmit={handleSubscribe} className="space-y-3">
+        <form onSubmit={handleSubscribe} className="flex flex-col gap-5">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Type your email address"
-            className="px-4 py-3 border border-gray-200 text-black bg-[#FFFFFF] rounded-lg text-sm w-[218px] outline-0"
+            className="px-4 py-3 border border-gray-200 text-black bg-[#FFFFFF] rounded-lg text-sm lg:w-[218px] outline-0"
             required
           />
-          <button
-            type="submit"
-            className="flex items-center justify-start space-x-2 w-full text-[#003262] py-3 rounded-lg  transition-colors duration-200 text-base font-medium"
-          >
-            <span>Subscribe</span>
-            <img src="/svg/arrow-top-right.svg" alt="" />
-          </button>
+          <AnimateButton
+            buttonText="Subscribe"
+            icon="/svg/arrow-top-right.svg"
+            path="#"
+            parentclasName="inline-flex relative"
+            cicleClassName="absolute left-[25%] top-[60%] -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
+            linkClassName="inline-flex items-center gap-2 text-sm font-medium text-[#003262] transition-colors relative z-10 px-4 py-2"
+          />
         </form>
       </div>
 
@@ -72,13 +74,13 @@ export default function BlogSidebar() {
           <span className="text-sm text-gray-600">Share this article</span>
           <div className="flex items-center space-x-3">
             {/* Instagram */}
-            <img src="/svg/Instagram.svg" alt="" />
+            <Instagram className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
 
             {/* Facebook */}
-            <img src="/svg/IFacebook.svg" alt="" />
+            <FaFacebook className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
 
             {/* LinkedIn */}
-            <img src="/svg/ILinkedIn.svg" alt="" />
+            <FaLinkedin className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
           </div>
         </div>
       </div>

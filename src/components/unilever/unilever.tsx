@@ -1,11 +1,18 @@
+import { useNavigate } from "react-router-dom";
+import AnimatedButton2 from "../general-components/animated-button2";
 import CaseStudyMobile from "./case-study-footer";
+import AnimateButton from "../general-components/animate-button";
+import { Instagram } from "lucide-react";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import TestimonialDesktop from "../what-we-do/testimonial-desktop";
 
 export function CaseStudyPage() {
+  const navigate = useNavigate();
   return (
     <main className="w-full">
       {/* Breadcrumb and Title */}
       <div className="md:px-6 py-8">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto  relative">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto  relative">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 pl-5">
             <span className="xl:absolute -left-7">/ 02</span>
             <span className="mx-2">/</span>
@@ -15,7 +22,7 @@ export function CaseStudyPage() {
       </div>
       {/* Hero Image */}
       <div className="md:px-6 mb-12">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto ">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto ">
           <img
             src="/png/blog4.png"
             alt="Unilever building exterior"
@@ -25,7 +32,7 @@ export function CaseStudyPage() {
       </div>
       {/* Case Study Content */}
       <div className="px-6 mb-16">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
@@ -103,7 +110,7 @@ export function CaseStudyPage() {
             </div>
             {/* Sidebar */}
             <div className="lg:col-span-1 border-t border-gray-200 pt-5 hidden md:block">
-              <div>
+              <div className="sticky top-10">
                 <div className="bg-[#F9FAFB]  p-6 rounded-lg">
                   <h3 className="text-lg font-medium text-[#003262] mb-4">
                     Infinity Mesh Newsletter
@@ -116,19 +123,31 @@ export function CaseStudyPage() {
                     placeholder="Type your email address"
                     className="w-full bg-white border text-[#003262] border-gray-200 rounded-md py-2 px-4 mb-4 outline-0"
                   />
-                  <button className="flex items-center gap-2 text-lg text-[#003262]">
+                  {/* <button className="flex items-center gap-2 text-lg text-[#003262]">
                     Subscribe
                     <img src="/svg/arrow-top-right.svg" alt="" />
-                  </button>
+                  </button> */}
+                  <AnimateButton
+                    buttonText="Subscribe"
+                    icon="/svg/arrow-top-right.svg"
+                    path="#"
+                    parentclasName="inline-flex relative"
+                    cicleClassName="absolute left-[35%] top-[60%] -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
+                    linkClassName="inline-flex items-center gap-2 text-sm font-medium text-[#003262] transition-colors relative z-10 px-4 py-2"
+                  />
                 </div>
                 <div className="mt-8 flex flex-col justify-center items-center border-y border-gray-200 py-8">
                   <p className="text-gray-600 text-lg mb-4">
                     Share the Case Study
                   </p>
                   <div className="flex justify-center gap-3">
-                    <img src="/svg/Instagram.svg" alt="" />
-                    <img src="/svg/IFacebook.svg" alt="" />
-                    <img src="/svg/ILinkedIn.svg" alt="" />
+                    <Instagram className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
+
+                    {/* Facebook */}
+                    <FaFacebook className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
+
+                    {/* LinkedIn */}
+                    <FaLinkedin className="w-6 h-6 text-[#003262] hover:text-[#84CC16] transition duration-300" />
                   </div>
                 </div>
               </div>
@@ -138,42 +157,34 @@ export function CaseStudyPage() {
       </div>
       {/* Navigation */}
       <div className="px-6 mb-16 hidden md:block">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto ">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto ">
           <div className="flex justify-between items-center">
-            <button className="flex items-center text-lg md:text-3xl font-bold pb-2 gap-2 text-[#0060BA] border-b border-[#84CC16]">
-              All Case Study
-            </button>
-            <button className="flex items-center text-lg md:text-3xl font-bold gap-2 text-[#0060BA] border-b border-[#84CC16] pb-2">
-              Next Case Study
-            </button>
+            <AnimatedButton2
+              buttonText="All Case Study"
+              orderIcon="order-1"
+              orderText="order-2"
+              handleClick={() => navigate("/our-work")}
+            />
+
+            <AnimatedButton2
+              buttonText="Next Case Study"
+              orderIcon="order-2"
+              orderText="order-1"
+              handleClick={() => navigate("/work-case/02")}
+            />
           </div>
         </div>
       </div>
       {/* Testimonial Section */}
       <div className="bg-gray-100 py-16 px-6 hidden md:block">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto ">
+        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto relative">
           <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 02</span>
             <span className="mx-2">/</span>
             <span className="text-lg font-semibold">What Our Clients Say</span>
           </div>
-          <div className="bg-white rounded-lg p-8 shadow-sm relative">
-            <img src="/svg/Quote icon.svg" alt="" className="w-16 h-16" />
-            <blockquote className="text-sm md:text-lg text-[#4B5563] mb-6 leading-relaxed md:ml-20 md:w-[40rem]">
-              High quality, delivery exceeds. High value, great value for the
-              money. Fast turnaround, working in multiple zones makes turn
-              around time faster.{" "}
-              <span className="font-semibold">
-                The team is a pleasure to work with.
-              </span>
-            </blockquote>
-            <div className="flex justify-between items-center">
-              <p className="text-blue-600 font-medium ml-20">Unilever</p>
-              <button className="w-14 h-14  rounded-full flex items-center justify-center text-white cursor-pointer">
-                <img src="/svg/Arrow_left.svg" alt="" />
-              </button>
-            </div>
-          </div>
+
+          <TestimonialDesktop />
         </div>
       </div>
       <div className="md:hidden">

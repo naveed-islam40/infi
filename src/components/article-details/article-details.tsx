@@ -1,10 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import AnimatedButton2 from "../general-components/animated-button2";
 import BlogSidebar from "./artcile-poster";
+import MobileBlogSidebar from "./article-poster-mobile";
 
 export default function BlogPost() {
+  const navigate = useNavigate();
   return (
     <div className=" bg-white">
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-8 lg:max-w-7xl 2xl:max-w-9xl py-10">
+      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl py-10">
         <div className="mb-12">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 01</span>
@@ -34,7 +38,7 @@ export default function BlogPost() {
 
             {/* Article Body */}
             <div className="flex flex-col lg:flex-row gap-10">
-              <div className="prose md:w-[85%]">
+              <div className="prose w-full lg:w-[85%]">
                 <p className="text-[#0060BA] leading-relaxed font-semibold mb-6">
                   If you're wondering what knowledge is used to support millions
                   of concurrent users with multiplayer games, you're in the
@@ -186,21 +190,31 @@ export default function BlogPost() {
                 </p>
               </div>
 
-              <div className="">
+              <div className="hidden md:block">
                 <BlogSidebar />
+              </div>
+              <div className="md:hidden">
+                <MobileBlogSidebar />
               </div>
             </div>
           </div>
 
           {/* Sidebar */}
         </div>
-        <div className="flex justify-between">
-          <button className="text-lg md:text-2xl text-[#0060BA] font-bold cursor-pointer border-b border-[#84CC16] pb-5">
-            All Articles{" "}
-          </button>
-          <button className="text-lg md:text-2xl text-[#0060BA] font-bold cursor-pointer border-b border-[#84CC16] pb-5">
-            Next Article{" "}
-          </button>
+        <div className="justify-between hidden md:flex">
+          <AnimatedButton2
+            buttonText="All Articles"
+            orderIcon="order-1"
+            orderText="order-2"
+            handleClick={() => navigate("/articles-list")}
+          />
+
+          <AnimatedButton2
+            buttonText="Next Article"
+            orderIcon="order-2"
+            orderText="order-1"
+            handleClick={() => navigate("/article-details/02")}
+          />
         </div>
       </main>
     </div>

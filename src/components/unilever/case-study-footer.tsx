@@ -4,14 +4,14 @@ export default function CaseStudyMobile() {
   return (
     <div className=" max-w-md mx-auto bg-white px-7">
       {/* Next Case Study Link */}
-      <div className="border-b-2 border-green-400 pt-4 pb-3">
+      <div className="border-b-2 border-[#84CC16] pt-4 pb-3">
         <a
           href="#"
-          className="flex items-center justify-between text-blue-600 font-medium hover:text-blue-700 transition-colors"
+          className="flex items-center justify-between text-[#84CC16] font-medium  transition-colors"
         >
           <span>Next Case Study</span>
-          <div className="w-8 h-8 rounded-full border-2 border-green-400 flex items-center justify-center">
-            <ArrowRight className="w-4 h-4 text-green-600" />
+          <div className="w-8 h-8 rounded-full border-2 border-[#84CC16] flex items-center justify-center">
+            <ArrowRight className="w-4 h-4 text-[#84CC16]" />
           </div>
         </a>
       </div>
@@ -59,13 +59,13 @@ export default function CaseStudyMobile() {
       </div>
 
       {/* Back to All Case Studies */}
-      <div className="border-b-2 border-green-400 pt-4 my-10 pb-5">
+      <div className="border-b-2 border-[#84CC16] pt-4 my-10 pb-5">
         <a
           href="#"
-          className="flex items-center gap-3 text-blue-600 font-medium hover:text-blue-700 transition-colors"
+          className="flex items-center gap-3 text-[#84CC16] font-medium transition-colors"
         >
-          <div className="w-8 h-8 rounded-full border-2 border-green-400 flex items-center justify-center">
-            <ArrowLeft className="w-4 h-4 text-green-600" />
+          <div className="w-8 h-8 rounded-full border-2 border-[#84CC16] flex items-center justify-center">
+            <ArrowLeft className="w-4 h-4 text-[#84CC16]" />
           </div>
           <span>Back to All Case Studies</span>
         </a>

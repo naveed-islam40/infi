@@ -1,6 +1,6 @@
 export default function WhatWeDo() {
   return (
-    <div className="border-b border-gray-300 ">
+    <div className="border-b border-gray-300 pt-20">
       {/* Main Content */}
       <main className="ml-auto 2xl:mx-auto lg:max-w-7xl 2xl:max-w-9xl relative">
         <div className="">
@@ -24,7 +24,7 @@ export default function WhatWeDo() {
             {/* Content Layout */}
             <div className="relative mt-20">
               <div className=" absolute right-5 -top-36 w-[300px] md:w-[400px]">
-                <div className="md:border-l-4 border-[#65A30D] h-96 p-4 rounded lg:rounded-none">
+                <div className="md:border-l-2 border-[#65A30D] h-96 p-4 rounded lg:rounded-none">
                   <p className="text-sm lg:text-lg text-[#65A30D] leading-relaxed font-normal">
                     We are a team of professionals — engineers, designers,
                     strategists, and project managers — united by a shared
@@ -37,11 +37,13 @@ export default function WhatWeDo() {
               <div className="flex flex-col items-end">
                 {/* Image */}
                 <div className="relative">
-                  <img
-                    src="/png/what_we_do.png"
-                    alt="Blue brick wall perspective"
-                    className="w-screen md:h-[500px] object-cover"
-                  />
+                  <div className="overflow-hidden">
+                    <img
+                      src="/png/what_we_do.png"
+                      alt="Blue brick wall perspective"
+                      className="w-screen md:h-[500px] object-cover hover:scale-110 transition duration-500 ease-in-out"
+                    />
+                  </div>
                   {/* Green logo overlay */}
                   <div className="absolute top-6 left-6 w-12 h-12 lg:w-16 lg:h-16">
                     <img src="/svg/Vector.svg" alt="" />
@@ -49,6 +51,9 @@ export default function WhatWeDo() {
                 </div>
               </div>
             </div>
+
+            {/* Mobile Line  */}
+            <div className="h-[80%] w-[1px] bg-[#65A30D] absolute left-10 bottom-0 md:hidden"></div>
 
             {/* Text Content */}
             <div className="flex justify-end">
@@ -74,9 +79,9 @@ export default function WhatWeDo() {
                     </p>
                   </div>
                   <div className="flex gap-36 justify-center">
-                    <div className="bg-gray-200 h-[300px] w-[2px]"></div>
-                    <div className="bg-gray-200 h-[300px] w-[2px]"></div>
-                    <div className="bg-gray-200 h-[300px] w-[2px]"></div>
+                    <div className="bg-[#65A30D] h-[300px] w-[1px]"></div>
+                    <div className="bg-[#65A30D] h-[300px] w-[1px]"></div>
+                    <div className="bg-[#65A30D] h-[300px] w-[1px]"></div>
                   </div>
                 </div>
 

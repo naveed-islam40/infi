@@ -65,11 +65,11 @@ export default function WorkCaseMobile() {
           <div key={item.id} className="relative">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center flex-1">
-                <span className="text-lime-500 font-medium text-sm mr-4">
+                <span className="text-[#84CC16] font-medium text-sm mr-4">
                   {item.id}
                 </span>
               </div>
-              <button className="ml-4 w-8 h-8 rounded-full border border-lime-500 flex items-center justify-center text-lime-500 hover:bg-lime-50 transition-colors">
+              <button className="ml-4 w-8 h-8 rounded-full border border-[#84CC16] flex items-center justify-center text-[#84CC16] hover:bg-lime-50 transition-colors">
                 <ArrowRight size={14} />
               </button>
             </div>

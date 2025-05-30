@@ -4,6 +4,8 @@
   --spacing-8xl: 80rem;
   --spacing-7xl-base: 83rem;
   --breakpoint-lg-base: 1152px;
+  --breakpoint-md-base: 1000px;
+  --animate-spin-slow: spin 10s linear infinite,
 }
 
 :root {
@@ -28,5 +30,92 @@ body {
 
 
 
+@keyframes moveX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+.move-x {
+  animation: moveX 2s ease-in-out infinite;
+}
+
+
+
+@keyframes moveY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem); /* You can adjust this value */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.move-y {
+  animation: moveY 2s ease-in-out infinite;
+}
+
+
+.gradient-circle-1 {
+  background: conic-gradient(
+    from 0deg,
+    #0060BA,
+    #60AEF9,
+    #AFDBD3,
+    #D9F99D,
+    #D9F99D,
+    #84CC16,
+    #65A30D,
+    #0060BA
+  );
+}
+
+.gradient-circle-2 {
+  background: conic-gradient(
+    from 0deg,
+    #0060BA,
+    #9747FF,
+    #86C4E6,
+    #AFDBD3,
+    #AFDBD3,
+    #FFFFFF,
+    #0060BA
+  );
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  animation: orbit 10s linear infinite;
+  transform-origin: center;
+}
+
+.orbit-circle {
+  transform: translateX(100px); /* Radius of the orbit */
+}
 

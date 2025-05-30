@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/contact");
+  };
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background image */}
@@ -8,26 +15,39 @@ export default function Footer() {
           alt="Laptop with colorful keyboard"
           className="w-full h-full object-cover"
         />
-        {/* <div className="absolute inset-0 bg-blue-900/50"></div> */}
       </div>
 
       {/* Content overlay */}
       <div className="relative px-8 z-10 h-full flex flex-col justify-end text-white lg:max-w-7xl 2xl:max-w-9xl mx-auto">
         <div>
           <p className="text-lg md:text-xl opacity-90 mb-2">Have an idea?</p>
-          <div className="flex justify-between lg:hidden items-center border-b border-[#84CC16] mb-10">
+          {/* Mobile  */}
+          <div
+            className="flex justify-between lg:hidden items-center border-b border-[#84CC16] mb-10 cursor-pointer"
+            onClick={handleNavigate}
+          >
             <span className="flex items-center gap-2">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#84CC16]">
                 Let's Talk
               </h2>
-              <img src="/svg/arrow_brown.svg" alt="" className="w-14 mb-4" />
+              <img src="/svg/arrow_brown.svg" alt="" className="w-14" />
             </span>
             <img src="/svg/chevron-double-up.svg" alt="" className="w-6" />
           </div>
 
-          <h2 className="hidden lg:block text-4xl md:text-5xl lg:text-6xl font-bold mb-8 border-b border-[#84CC16] pb-10">
-            Let's Talk
-          </h2>
+          <div
+            className="hidden group lg:flex items-center border-b border-[#84CC16] hover:text-[#84CC16] transition duration-400 ease-in-out mb-5 pb-5 gap-10 cursor-pointer"
+            onClick={handleNavigate}
+          >
+            <h2 className=" text-4xl md:text-5xl lg:text-8xl font-bold   ">
+              Let's Talk
+            </h2>
+            <img
+              src="/svg/arrow_brown.svg"
+              alt=""
+              className="w-24 opacity-0 group-hover:opacity-100 transition duration-400 ease-in-out"
+            />
+          </div>
 
           <div className="justify-between items-start hidden lg:flex">
             <div className="gap-5 text-[#9CA3AF] flex">

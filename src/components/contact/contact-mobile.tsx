@@ -1,3 +1,5 @@
+import AnimateButton from "../general-components/animate-button";
+
 export default function Contactmobile() {
   return (
     <div className="min-h-screen bg-white">
@@ -67,13 +69,21 @@ export default function Contactmobile() {
               />
             </div>
 
-            <button
+            {/* <button
               type="submit"
               className="flex items-center gap-2 text-[#003262] font-medium cursor-pointer"
             >
               Send Message
               <img src="/svg/arrow-top-right.svg" alt="" />
-            </button>
+            </button> */}
+            <AnimateButton
+              buttonText="Send Message"
+              icon="/svg/arrow-top-right.svg"
+              path="#"
+              parentclasName="inline-flex relative"
+              cicleClassName="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
+              linkClassName="flex items-center gap-2 text-[#003262] transition-colors mt-5 relative z-10"
+            />
           </form>
         </div>
       </section>
