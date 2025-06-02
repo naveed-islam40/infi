@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function WorkCaseMobile() {
   const timelineItems = [
@@ -58,11 +59,21 @@ export default function WorkCaseMobile() {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/work-case/01");
+  };
+
   return (
-    <div className="max-w-md mx-auto mt-10 mb-5">
+    <div className="max-w-2xl mx-auto mb-5">
       <div className="space-y-8">
         {timelineItems.map((item) => (
-          <div key={item.id} className="relative">
+          <div
+            key={item.id}
+            className="relative cursor-pointer"
+            onClick={handleNavigate}
+          >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center flex-1">
                 <span className="text-[#84CC16] font-medium text-sm mr-4">
@@ -85,7 +96,7 @@ export default function WorkCaseMobile() {
               <img
                 src={item.image || "/placeholder.svg"}
                 alt={item.imageAlt}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover cursor-pointer"
               />
             </div>
           </div>

@@ -5,6 +5,7 @@
   --spacing-7xl-base: 83rem;
   --breakpoint-lg-base: 1152px;
   --breakpoint-md-base: 1000px;
+  --breakpoint-xs-small: 450px;
   --animate-spin-slow: spin 10s linear infinite,
 }
 

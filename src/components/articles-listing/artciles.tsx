@@ -61,7 +61,7 @@ export default function Articles() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       {/* Main Content */}
-      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 01</span>

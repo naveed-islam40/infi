@@ -8,7 +8,7 @@ export default function StatsComponentMobile() {
   ];
 
   return (
-    <div className="bg-white max-w-md mx-auto mt-10">
+    <div className="bg-white max-w-2xl mx-auto mt-10">
       <div className="space-y-6">
         {stats.map((stat, index) => (
           <div key={index} className="flex items-center justify-between">

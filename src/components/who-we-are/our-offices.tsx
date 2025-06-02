@@ -1,7 +1,7 @@
 const OurOffices = () => {
   return (
     <div className="bg-[#F9FAFB]">
-      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12 py-5">
           <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 02</span>

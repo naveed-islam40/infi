@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ContentTimeline() {
   const timelineItems = [
@@ -43,11 +44,21 @@ export default function ContentTimeline() {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/article-details/01");
+  };
+
   return (
-    <div className="max-w-md mx-auto mt-10 mb-5">
+    <div className="max-w-2xl mx-auto mt-10 mb-5">
       <div className="space-y-8">
         {timelineItems.map((item) => (
-          <div key={item.id} className="relative">
+          <div
+            key={item.id}
+            className="relative cursor-pointer"
+            onClick={handleNavigate}
+          >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center flex-1">
                 <span className="text-lime-500 font-medium text-sm mr-4">

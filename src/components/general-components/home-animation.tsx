@@ -6,7 +6,7 @@ export default function FloatingBlob() {
       <div className="relative flex items-center justify-center">
         {/* First Large Blob - Moving Only on X-axis */}
         <motion.div
-          className="absolute w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full opacity-70 blur-md"
+          className="absolute w-[200px] h-[200px] xs-small:w-[400px] xs-small:h-[400px] rounded-full opacity-70 blur-md"
           style={{
             background: `conic-gradient(from 0deg, 
               #0060BA 0%, 
@@ -30,7 +30,7 @@ export default function FloatingBlob() {
 
         {/* Second Blob - Circular Motion */}
         <motion.div
-          className="absolute w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full opacity-60 blur-md"
+          className="absolute w-[300px] h-[300px] xs-small:w-[400px] xs-small:h-[400px] rounded-full opacity-60 blur-md"
           style={{
             background: `radial-gradient(circle at 30% 70%, 
               #9747FF 0%, 

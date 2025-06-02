@@ -53,7 +53,7 @@ export function WorkSection() {
   ];
   return (
     <main className="w-full px-6 py-12">
-      <div className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-9xl relativemax-w-7xl">
+      <div className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12">
           <div className="mb-12">
             <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">

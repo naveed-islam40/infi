@@ -12,7 +12,7 @@ export default function TestimonialCardMobile() {
   };
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-2xl mx-auto">
       <AnimatePresence mode="wait">
         {testimonialData.map((item, idx) => {
           if (idx + 1 !== currentTab) return null;

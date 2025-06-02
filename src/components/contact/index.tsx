@@ -4,9 +4,9 @@ import Contactmobile from "./contact-mobile";
 
 export function ContactForm() {
   return (
-    <div>
+    <div className="">
       <Navbar />
-      <main className="max-w-3xl mx-auto lg:max-w-9xl min-h-screen sm:flex flex-col lg:flex-row hidden ">
+      <main className="w-full mx-auto 2xl:max-w-9xl min-h-screen sm:flex flex-col justify-between lg:flex-row hidden">
         {/* Left Side - Dark Blue */}
         <div className="lg:w-1/2 bg-[#003262] text-white p-8 flex flex-col justify-between px-6 md:px-20 order-2 lg:order-1">
           <div>

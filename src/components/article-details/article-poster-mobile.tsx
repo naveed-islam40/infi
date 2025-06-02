@@ -4,8 +4,10 @@ import { Instagram } from "lucide-react";
 import { useState } from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import AnimateButton from "../general-components/animate-button";
+import { useNavigate } from "react-router-dom";
 
 export default function MobileBlogSidebar() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
@@ -38,14 +40,17 @@ export default function MobileBlogSidebar() {
       </div>
 
       {/* Next Article Section */}
-      <div className="flex items-center justify-center py-3 border-b border-[#84CC16]">
-        <span className="text-base font-bold text-[#003262]">Next Article</span>
+      <div
+        className="flex items-center justify-center py-3 border-b cursor-pointer border-[#84CC16]"
+        onClick={() => navigate("/article-details/01")}
+      >
+        <span className="font-bold text-xl text-[#0060BA]">Next Article</span>
         <img src="/svg/arrow-right.svg" alt="" />
       </div>
 
       {/* Newsletter Section */}
       <div className="space-y-4 bg-[#F3F4F6] p-4 rounded-lg">
-        <div className="text-center">
+        <div className="">
           <h3 className="text-lg font-semibold text-[#003262] mb-2">
             Infinity Mesh Newsletter
           </h3>
@@ -88,7 +93,10 @@ export default function MobileBlogSidebar() {
 
       {/* Back to Articles Section */}
       <div className="pt-4 border-t border-[#84CC16]">
-        <button className="w-full border-[#8BC500] text-[#003262] cursor-pointer py-3 rounded-lg transition-colors flex items-center justify-center font-bold gap-2">
+        <button
+          className="w-full border-[#8BC500] text-[#0060BA] text-xl cursor-pointer py-3 rounded-lg transition-colors flex items-center justify-center font-bold gap-2"
+          onClick={() => navigate("/articles-list")}
+        >
           <img src="/svg/arrow-left.svg" alt="" />
           Back to all Articles
         </button>

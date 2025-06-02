@@ -1,19 +1,20 @@
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CaseStudyMobile() {
   return (
-    <div className=" max-w-md mx-auto bg-white px-7">
+    <div className="max-w-2xl mx-auto bg-white px-7">
       {/* Next Case Study Link */}
       <div className="border-b-2 border-[#84CC16] pt-4 pb-3">
-        <a
-          href="#"
-          className="flex items-center justify-between text-[#84CC16] font-medium  transition-colors"
+        <Link
+          to={"/work-case/01"}
+          className="flex items-center justify-center space-x-2 text-[#0060BA] font-medium  transition-colors text-xl"
         >
           <span>Next Case Study</span>
           <div className="w-8 h-8 rounded-full border-2 border-[#84CC16] flex items-center justify-center">
             <ArrowRight className="w-4 h-4 text-[#84CC16]" />
           </div>
-        </a>
+        </Link>
       </div>
 
       {/* Newsletter Section */}
@@ -60,15 +61,15 @@ export default function CaseStudyMobile() {
 
       {/* Back to All Case Studies */}
       <div className="border-b-2 border-[#84CC16] pt-4 my-10 pb-5">
-        <a
-          href="#"
-          className="flex items-center gap-3 text-[#84CC16] font-medium transition-colors"
+        <Link
+          to={"/our-work"}
+          className="flex items-center justify-center gap-3 text-[#0060BA] text-xl font-medium transition-colors"
         >
           <div className="w-8 h-8 rounded-full border-2 border-[#84CC16] flex items-center justify-center">
             <ArrowLeft className="w-4 h-4 text-[#84CC16]" />
           </div>
           <span>Back to All Case Studies</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

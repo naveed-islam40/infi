@@ -44,7 +44,7 @@ export default function Menu({ onClose }: { onClose: () => void }) {
           </div>
 
           {/* Mobile Layout */}
-          <MobileMenu />
+          <MobileMenu onClose={handleClose} />
 
           {/* Desktop Layout */}
           <div className="hidden md:grid lg:grid-cols-2 gap-16 h-[calc(100vh-170px)]">

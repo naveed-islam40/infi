@@ -4,7 +4,7 @@ import StatsComponent from "./OurTrackRecord2";
 const OurTrackRecord = () => {
   return (
     <div className="bg-white">
-      <div className="w-full mx-auto px-8 sm:px-6 lg:px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+      <div className="w-full mx-auto px-8 sm:px-6 lg:px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12 space-y-8">
           {/* Section Title */}
           <div className="text-[#003262] flex items-center gap-2 text-sm md:text-base">

@@ -8,7 +8,7 @@ export default function BlogPost() {
   return (
     <div className=" bg-white">
       {/* Main Content */}
-      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl py-10">
+      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl py-10">
         <div className="mb-12">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 01</span>

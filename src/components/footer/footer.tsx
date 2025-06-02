@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       {/* Content overlay */}
-      <div className="relative px-8 z-10 h-full flex flex-col justify-end text-white lg:max-w-7xl 2xl:max-w-9xl mx-auto">
+      <div className="relative px-8 z-10 h-full flex flex-col justify-end text-white lg:max-w-6xl 2xl:max-w-7xl mx-auto">
         <div>
           <p className="text-lg md:text-xl opacity-90 mb-2">Have an idea?</p>
           {/* Mobile  */}

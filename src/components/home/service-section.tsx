@@ -6,7 +6,7 @@ const ServicesSection = () => {
   return (
     <div>
       <section className="h-full bg-white flex items-center my-10">
-        <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+        <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
           <div className="mb-8 flex items-center gap-2 text-sm">
             <span className="text-[#003262] xl:absolute -left-7">/03</span>
             <span className="text-[#003262] mx-2">/</span>
@@ -33,7 +33,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </section>
-      <div className="hidden md:block">
+      <div className="hidden md:block 2xl:max-w-7xl mx-auto">
         <ServicesGrid />
       </div>
       <div className="block md:hidden">

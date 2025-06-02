@@ -39,7 +39,7 @@ const articles: Article[] = [
 
 export default function ArticlesInsights() {
   return (
-    <div className="w-full px-8  mx-auto lg:max-w-6xl 2xl:max-w-9xl relative my-10">
+    <div className="w-full px-8  mx-auto lg:max-w-6xl 2xl:max-w-7xl relative my-10">
       <div className="flex text-sm text-[#003262] mb-6">
         <span className="xl:absolute -left-7">/ 04</span>
         <span className="mx-2">/</span>

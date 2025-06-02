@@ -9,7 +9,7 @@ export default function ClientLogos() {
   //   ];
 
   return (
-    <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+    <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
       <img src="/png/tempImage2lnU7g 1.png" alt="" />
       {/* <div className="mx-auto">
         <div className="flex items-center justify-center space-x-12 overflow-x-auto">

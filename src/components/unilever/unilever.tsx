@@ -12,7 +12,7 @@ export function CaseStudyPage() {
     <main className="w-full">
       {/* Breadcrumb and Title */}
       <div className="md:px-6 py-8">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto  relative">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto  relative">
           <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 pl-5">
             <span className="xl:absolute -left-7">/ 02</span>
             <span className="mx-2">/</span>
@@ -32,7 +32,7 @@ export function CaseStudyPage() {
       </div>
       {/* Case Study Content */}
       <div className="px-6 mb-16">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
@@ -157,7 +157,7 @@ export function CaseStudyPage() {
       </div>
       {/* Navigation */}
       <div className="px-6 mb-16 hidden md:block">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto ">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto ">
           <div className="flex justify-between items-center">
             <AnimatedButton2
               buttonText="All Case Study"
@@ -177,7 +177,7 @@ export function CaseStudyPage() {
       </div>
       {/* Testimonial Section */}
       <div className="bg-gray-100 py-16 px-6 hidden md:block">
-        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-9xl mx-auto relative">
+        <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-7xl mx-auto relative">
           <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
             <span className="xl:absolute -left-7">/ 02</span>
             <span className="mx-2">/</span>

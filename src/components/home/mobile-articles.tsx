@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function MobileArticles() {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/article/01");
+    navigate("/article-details/01");
   };
   return (
     <div className=" bg-white rounded-lg border overflow-hidden">
@@ -13,7 +13,7 @@ export default function MobileArticles() {
         <img
           src="/svg/arrow_brown.svg"
           alt=""
-          className="w-14 h-14"
+          className="w-14 h-14 cursor-pointer"
           onClick={handleNavigate}
         />
       </div>

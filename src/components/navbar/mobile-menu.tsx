@@ -1,44 +1,71 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const MobileMenu = () => {
+const MobileMenu = ({ onClose }: { onClose: () => void }) => {
   return (
     <div className="md:hidden">
       {/* Navigation */}
       <nav className="space-y-6 mb-12">
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        <Link
+          to="/"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           Home
-        </a>
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        </Link>
+        <Link
+          to="/who-we-are"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           Who We Are
-        </a>
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        </Link>
+        <Link
+          to="/what-we-do"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           What We Do
-        </a>
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        </Link>
+        <Link
+          to="/our-work"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           Work
-        </a>
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        </Link>
+        <Link
+          to="/articles-list"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           Articles
-        </a>
-        <a href="#" className="block text-2xl font-medium text-[#003262]">
+        </Link>
+        <Link
+          to="/contact"
+          className="block text-2xl font-medium text-[#003262]"
+          onClick={onClose}
+        >
           Contact
-        </a>
+        </Link>
       </nav>
 
       {/* Footer Links */}
       <div className="flex gap-6 mb-8">
-        <a
-          href="#"
+        <Link
+          to="/privacy-policy"
+          onClick={onClose}
           className="text-slate-600 hover:text-blue-600 transition-colors"
         >
           Privacy Policy
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/privacy-policy"
+          onClick={onClose}
           className="text-slate-600 hover:text-blue-600 transition-colors"
         >
           Cookie Policy
-        </a>
+        </Link>
       </div>
 
       {/* Separator Line */}

@@ -16,7 +16,7 @@ export default function Introduction() {
       }}
       className="bg-white text-black py-10 h-full w-full"
     >
-      <section className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-9xl relative">
+      <section className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-8 flex items-center gap-2 text-sm">
           <span className="text-[#003262] xl:absolute -left-7">/02</span>
           <span className="text-[#003262] mx-2">/</span>

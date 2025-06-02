@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { tabsData } from "./tabs-data";
 import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function EndToEndProductDetails() {
+  const navigate = useNavigate();
   const [currentTab, setCurrentTab] = useState(1);
 
   const handleClickTab = (inx: number) => {
@@ -14,9 +16,13 @@ export default function EndToEndProductDetails() {
     }
   };
 
+  const handleNavigate = () => {
+    navigate("/our-work");
+  };
+
   return (
     <section className="bg-white">
-      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-9xl relative my-5">
+      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative my-5">
         {/* Header with breadcrumb and icon */}
         <div className="flex justify-between items-center mb-16  border-b border-[#84CC16] pb-5">
           <div className="text-sm flex flex-col ">
@@ -30,7 +36,12 @@ export default function EndToEndProductDetails() {
             </span>
           </div>
           <div className="w-14 h-14 rounded-full flex items-center justify-center">
-            <img src="/svg/arrow_brown.svg" alt="" className="cursor-pointer" />
+            <img
+              src="/svg/arrow_brown.svg"
+              alt=""
+              className="cursor-pointer"
+              onClick={handleNavigate}
+            />
           </div>
         </div>
 
