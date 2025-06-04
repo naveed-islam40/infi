@@ -39,25 +39,32 @@ const articles: Article[] = [
 
 export default function ArticlesInsights() {
   return (
-    <div className="w-full px-8  mx-auto lg:max-w-6xl 2xl:max-w-7xl relative my-10 md:my-40">
-      <div>
-        <div className="flex text-[#003262] mb-6 text-base xl:text-xl font-semibold">
-          <span className="1500:absolute -left-32">/ 04</span>
-          <span className="mx-2">/</span>
-          <span>Articles</span>
+    <div className="w-[90%] mx-auto 2xl:max-w-9xl relative my-10 md:my-20 lg:my-40">
+      <div className="grid lg:grid-cols-12">
+        <div className="hidden lg:col-span-2 text-base xl:text-xl font-semibold text-[#003262] mb-2 md:mb-4 lg:flex  gap-2 ">
+          / 04
         </div>
 
-        <h2 className="text-xl md:text-2xl lg:text-4xl font-medium text-[#003262] my-10 hover:text-[#65A30D] transition-colors duration-500 max-w-2xl">
-          Welcome to our Insights where technology meets real-world problem
-          solving.
-        </h2>
+        <div className="lg:col-span-10 lg:-ml-24">
+          <div className="mb-2 md:mb-4 flex  gap-2 items-center text-base xl:text-xl font-semibold">
+            <span className="block lg:hidden text-[#003262]">/ 04</span>
 
-        <p className="text-[#4B5563] mb-12 max-w-2xl text-base md:text-xl">
-          We share hands-on tips, industry trends, and lessons learned from
-          building software that scales. Whether you're a developer, product
-          thinker, or just tech-driven soul, you'll find our articles worth your
-          time.
-        </p>
+            <span className="text-[#003262]">/</span>
+            <span className="text-[#003262]">Articles</span>
+          </div>
+
+          <h2 className="text-xl md:text-2xl lg:text-4xl font-medium text-[#65A30D] md:text-[#003262] my-10 hover:text-[#65A30D] transition-colors duration-500 max-w-2xl">
+            Welcome to our Insights where technology meets real-world problem
+            solving.
+          </h2>
+
+          <p className="text-[#4B5563] mb-12 max-w-2xl text-base md:text-xl">
+            We share hands-on tips, industry trends, and lessons learned from
+            building software that scales. Whether you're a developer, product
+            thinker, or just tech-driven soul, you'll find our articles worth
+            your time.
+          </p>
+        </div>
       </div>
 
       <div className="space-y-6 hidden md:block">

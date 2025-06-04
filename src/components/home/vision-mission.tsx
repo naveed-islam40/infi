@@ -24,7 +24,7 @@ export default function VisionMission() {
       </div>
 
       {/* Card Container */}
-      <div className="relative w-full lg:max-w-6xl 2xl:max-w-7xl mx-auto md:px-8">
+      <div className="relative w-full md:w-[90%] lg:w-[75%] mx-auto 2xl:max-w-9xl">
         <div className="backdrop-blur-md md:rounded-3xl p-8 lg:p-20 shadow-lg bg-gradient-to-r from-white to-[#B8DAFB99] h-[300px] lg:h-[500px]">
           <div className=" flex items-start justify-between">
             {/* Tabs */}

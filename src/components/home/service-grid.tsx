@@ -42,7 +42,7 @@ const services: ServiceItem[] = [
 
 export default function ServicesGrid() {
   return (
-    <div className="px-6 md:px-40 py-16 md:py-28 bg-[#F3F4F6] rounded-4xl lg:mx-5">
+    <div className="px-10 lg:px-36 xl:px-44 py-16 md:py-28 bg-[#F3F4F6] rounded-4xl lg:mx-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {services.map((service) => (
           <Link
@@ -80,7 +80,7 @@ export default function ServicesGrid() {
                 className="absolute inset-0"
               >
                 <motion.span
-                  className="absolute top-10 -left-10 text-7xl font-bold text-[#65A30D]"
+                  className="absolute top-10 -left-10 text-9xl font-bold text-[#65A30D]"
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.1, duration: 0.3 }}
@@ -92,7 +92,7 @@ export default function ServicesGrid() {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                  className="w-[400px] max-w-full origin-center"
+                  className="w-[400px]  origin-center"
                 />
               </motion.div>
             </AnimatePresence>

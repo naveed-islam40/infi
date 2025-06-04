@@ -59,30 +59,33 @@ export default function Articles() {
     },
   ];
   return (
-    <div className="min-h-screen bg-gray-50 pt-40 pb-20">
-      {/* Main Content */}
-      <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
-        <div className="mb-12">
-          <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-2xl">
-            <span className="1500:absolute -left-32">/ 01</span>
-            <span>/</span>
-            <span> Articles</span>
+    <main className="w-full pt-24 lg:pt-32 xl:pt-40 pb-10 md:pb-20">
+      <div className="w-[90%] 2xl:max-w-9xl mx-auto">
+        <div className=" self-center grid lg:grid-cols-12">
+          <div className=" hidden lg:col-span-1 text-[#65A30D] mb-2 md:mb-4 lg:flex  gap-2 text-base xl:text-xl font-semibold">
+            / 01
           </div>
-          <div className="rounded-lg pt-10">
-            <p className="text-[#003262] md:w-[40rem] text-lg md:text-5xl font-semibold">
-              Welcome to our Insights where technology meets real-world problem
-              solving
-            </p>
-          </div>
-        </div>
-        <div className="flex justify-end w-full py-20">
-          <p className="text-[#4B5563] w-[25rem] text-xl">
-            We share hands-on tips, industry trends, and lessons learned from
-            building software that scales. Whether you're a developer, product
-            thinker, or just love clean code, you'll find our articles worth
-            your time.
-          </p>
-        </div>
+          <div className="lg:col-span-11">
+            <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-xl md:text-2xl">
+              <span className="block lg:hidden">/ 01</span>
+
+              <span>/</span>
+              <span>Articles</span>
+            </div>
+
+            <div className="rounded-lg">
+              <h1 className="md:w-[60%] text-3xl lg:text-4xl xl:text-5xl font-semibold text-[#003262] leading-tight lg:leading-none xl:py-10">
+                Welcome to our Insights where technology meets real-world
+                problem solving
+              </h1>
+
+              <p className="mt-5 md:mt-10 lg:mt-0 text-base md:text-lg lg:text-lg text-[#4B5563] font-normal md:w-[70%] lg:w-[40%] lg:ml-auto ">
+                We share hands-on tips, industry trends, and lessons learned
+                from building software that scales. Whether you're a developer,
+                product thinker, or just love clean code, you'll find our
+                articles worth your time.
+              </p>
+            </div>
 
         {/* Articles List */}
         <div className="mt-16 hidden md:block">
@@ -153,7 +156,12 @@ export default function Articles() {
         <div className="md:hidden">
           <ContentTimeline />
         </div>
+
+            </div>
+            </div>
+            </div>
+
+
       </main>
-    </div>
   );
 }

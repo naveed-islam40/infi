@@ -9,31 +9,39 @@ export default function InFinityMesh() {
     });
   };
   return (
-    <main className=" bg-gradient-to-r from-[#014789] to-[#001930] text-white overflow-hidden py-20 min-h-screen flex flex-col justify-center">
+    <main className=" bg-gradient-to-r from-[#014789] to-[#001930] text-white overflow-hidden pt-20 pb-10 md:pb-20 lg:pb-0  flex flex-col justify-center">
       {/* Main Content */}
-      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl flex flex-col md-base:flex-row items-center relative">
-        <div className="z-10">
-          <div className="text-[#84CC16] mb-2 md:mb-4 flex items-center gap-2 text-base xl:text-xl font-semibold">
-            <span className="1500:absolute -left-32 ">/ 01</span>
-            <span className="">/</span>
-            <span className="">Infinity Mesh</span>
+      <div className="grid lg:grid-cols-2 w-[90%]  2xl:max-w-9xl mx-auto pt-5 md:pt-10 lg:pt-20 pb-0 xl:pt-20 xl:pb-10">
+        <div className="self-center grid lg:grid-cols-12 xl:mt-20">
+          <div className="hidden  lg:col-span-2 text-[#84CC16] mb-2 md:mb-4 lg:flex  gap-2 text-base xl:text-xl font-semibold">
+            / 01
           </div>
 
-          <h1 className="text-xl md:text-3xl lg:text-5xl font-semibold font-inter leading-tight mb-6 md:w-[70%]">
-            Think Bigger, Build Smarter and Scale Faster
-          </h1>
+          <div className="lg:col-span-10">
+            <div className="text-[#84CC16] mb-2 md:mb-4 flex  gap-2 text-base xl:text-xl font-semibold">
+              <span className="block lg:hidden">/ 01</span>
+              <span className="">/</span>
+              <span className="">Infinity Mesh</span>
+            </div>
 
-          <p className="text-sm md:text-xl text-[#84CC16] max-w-md">
-            We deliver full-scale digital development solutions that turn bold
-            ideas into high-impact products.
-          </p>
+            <h1 className="mt-5 lg:mt-0 text-xl md:text-3xl xl:text-[44px] font-semibold font-inter leading-tight mb-6 md:w-[70%]">
+              Think Bigger, Build Smarter and Scale Faster
+            </h1>
 
-          <div className="hidden md:block mt-40">
-            <ScrollAnimation handleClick={handleClick} />
+            <p className="w-[70%] md:w-auto text-sm lg:text-xl xl:text-[22px] text-[#84CC16] max-w-md">
+              We deliver full-scale digital development solutions that turn bold
+              ideas into high-impact products.
+            </p>
+
+            <div className="hidden lg:block mt-40">
+              <ScrollAnimation handleClick={handleClick} />
+            </div>
           </div>
         </div>
 
-        <HomeAnimation />
+        <div className="md:w-[80%] mx-auto lg:mr-0 lg:ml-auto mt-20 lg:mt-0">
+          <HomeAnimation />
+        </div>
       </div>
     </main>
   );
