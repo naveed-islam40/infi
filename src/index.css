@@ -1,11 +1,14 @@
 @import "tailwindcss";
 @theme {
   --spacing-9xl: 96rem;
-  --spacing-8xl: 80rem;
+  --spacing-8xl: 90rem;
   --spacing-7xl-base: 83rem;
   --breakpoint-lg-base: 1152px;
   --breakpoint-md-base: 1000px;
   --breakpoint-xs-small: 450px;
+  --breakpoint-base-lg: 1350px;
+  --breakpoint-1500: 1500px;
+  --breakpoint-1300: 1300px;
   --animate-spin-slow: spin 10s linear infinite,
 }
 

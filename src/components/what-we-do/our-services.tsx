@@ -1,15 +1,15 @@
 const OurServies = () => {
   return (
-    <div className="bg-[#F9FAFB] pt-5">
+    <div className="py-10 md:py-40 h-full">
       <div className=" mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
-        <div className="mb-12">
-          <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-7">/ 02</span>
-            <span className="mx-2">/</span>
-            <span className="text-lg font-semibold">Our Services</span>
+        <div>
+          <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-lg md:text-2xl">
+            <span className="1500:absolute -left-32">/ 02</span>
+            <span>/</span>
+            <span>Our Services</span>
           </div>
-          <div className="md:p-6 rounded-lg">
-            <p className="hover:text-[#65A30D] text-[#003262] transition-colors duration-500 font-semibold md:w-[30rem] text-sm md:text-lg">
+          <div className="rounded-lg pt-10">
+            <p className="hover:text-[#003262] text-[#65A30D] transition-colors duration-500 md:w-[35rem] font-semibold text-base md:text-2xl">
               By combining strategic thinking with hands-on execution, we help
               you move faster, reduce risk, and create digital solutions that
               support long-term growth. We don’t just build products — we build

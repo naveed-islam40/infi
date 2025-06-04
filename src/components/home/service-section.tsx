@@ -5,17 +5,19 @@ import AnimateButton from "../general-components/animate-button";
 const ServicesSection = () => {
   return (
     <div>
-      <section className="h-full bg-white flex items-center my-10">
+      <section className="h-full bg-white flex items-center my-10 md:my-28">
         <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
-          <div className="mb-8 flex items-center gap-2 text-sm">
-            <span className="text-[#003262] xl:absolute -left-7">/03</span>
-            <span className="text-[#003262] mx-2">/</span>
-            <span className="text-[#003262]">Our Services</span>
+          <div className="mb-8 flex items-center gap-2 text-base xl:text-xl font-semibold">
+            <span className="text-[#003262] 1500:absolute -left-32 text-base xl:text-xl font-semibold">
+              /03
+            </span>
+            <span className="text-[#003262] font-semibold">/</span>
+            <span className="text-[#003262] ">Our Services</span>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <div className="max-w-xl">
-              <h2 className="text-xl md:text-2xl lg:text-4xl font-medium text-[#8BC500] hover:text-[#003262] transition-colors duration-500 leading-tight">
+            <div className="max-w-lg lg:max-w-xl ">
+              <h2 className="text-base md:text-2xl lg:text-4xl font-medium text-[#003262] hover:text-[#8BC500] transition-colors duration-500 leading-tight">
                 From strategy to code, we deliver end-to-end software
                 development that drives innovation, accelerates growth, and
                 creates lasting value.
@@ -33,7 +35,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </section>
-      <div className="hidden md:block 2xl:max-w-7xl mx-auto">
+      <div className="hidden md:block w-full lg:max-w-6xl xl:max-w-8xl 2xl:max-w-9xl mx-auto">
         <ServicesGrid />
       </div>
       <div className="block md:hidden">

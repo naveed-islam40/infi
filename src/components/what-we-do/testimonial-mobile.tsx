@@ -28,7 +28,7 @@ export default function TestimonialCardMobile() {
             >
               {/* Header with quote icon and arrow button */}
               <div className="flex justify-between items-start mb-6">
-                <img src="/svg/Quote icon.svg" alt="" className="w-8" />
+                <img src="/svg/Quote icon.svg" alt="" className="w-12" />
                 <button className="w-10 h-10 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-colors">
                   <ArrowRight size={16} />
                 </button>
@@ -36,9 +36,10 @@ export default function TestimonialCardMobile() {
 
               {/* Testimonial text */}
               <div className="mb-6">
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {item.message}
-                </p>
+                <p
+                  className="text-gray-700 text-sm leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: item.message }}
+                ></p>
               </div>
 
               {/* Company / User */}

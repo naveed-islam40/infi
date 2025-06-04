@@ -59,24 +59,24 @@ export default function Articles() {
     },
   ];
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 pt-40 pb-20">
       {/* Main Content */}
       <main className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12">
-          <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-7">/ 01</span>
-            <span className="mx-2">/</span>
-            <span className="text-lg font-semibold"> Articles</span>
+          <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-2xl">
+            <span className="1500:absolute -left-32">/ 01</span>
+            <span>/</span>
+            <span> Articles</span>
           </div>
-          <div className="md:p-6 rounded-lg">
-            <p className="text-[#003262] md:w-[32rem] text-lg md:text-4xl font-semibold">
+          <div className="rounded-lg pt-10">
+            <p className="text-[#003262] md:w-[40rem] text-lg md:text-5xl font-semibold">
               Welcome to our Insights where technology meets real-world problem
               solving
             </p>
           </div>
         </div>
-        <div className="flex justify-end w-full">
-          <p className="text-[#4B5563] w-[25rem] text-base">
+        <div className="flex justify-end w-full py-20">
+          <p className="text-[#4B5563] w-[25rem] text-xl">
             We share hands-on tips, industry trends, and lessons learned from
             building software that scales. Whether you're a developer, product
             thinker, or just love clean code, you'll find our articles worth
@@ -86,14 +86,14 @@ export default function Articles() {
 
         {/* Articles List */}
         <div className="mt-16 hidden md:block">
-          <div className="space-y-1 w-full">
+          <div className="space-y-2 w-full">
             {articles.map((article) => (
               <div key={article.id} className="pb-6 group relative">
                 <div className="flex justify-between items-center group-hover:opacity-0">
-                  <span className="text-[#003262] text-lg font-mono">
+                  <span className="text-[#003262] text-2xl font-semibold font-mono">
                     {article.id}
                   </span>
-                  <h3 className="text-xl font-semibold text-[#003262] text-right flex-1 ml-8">
+                  <h3 className="text-3xl font-semibold text-[#003262] text-right flex-1 ml-8">
                     {article.title}
                   </h3>
                 </div>
@@ -110,7 +110,7 @@ export default function Articles() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-20">
                         <motion.span
-                          className="text-xl font-bold text-[#65A30D] mb-10"
+                          className="text-2xl font-bold text-[#65A30D] mb-10"
                           initial={{ x: -20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ delay: 0.1, duration: 0.3 }}
@@ -130,11 +130,11 @@ export default function Articles() {
                         />
                       </div>
                       <Link
-                        to={`/article-details/${article.id}`}
+                        to={`/article-details/${article.id}?title=${article.title}`}
                         className="mb-10"
                       >
                         <motion.span
-                          className="text-xl font-semibold text-[#65A30D] flex items-center gap-2"
+                          className="text-3xl font-semibold text-[#65A30D] flex items-center gap-2"
                           initial={{ x: -20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ delay: 0.1, duration: 0.3 }}

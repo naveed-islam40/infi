@@ -10,20 +10,22 @@ import Unilever from "./components/unilever";
 import { ContactForm } from "./components/contact";
 import { PrivacyPolicy } from "./components/privacy-policy";
 import Navbar from "./components/navbar";
+import ScrollToTop from "./components/general-components/ScrollToTop";
 
 const App = () => {
   const { pathname } = useLocation();
   return (
     <div className="">
+      <ScrollToTop />
       {pathname !== "/contact" && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/who-we-are" element={<WhoWeAreMain />} />
         <Route path="/what-we-do" element={<WhatWeDoMain />} />
-        <Route path="/articles-list" element={<ArticlesList />} />
-        <Route path="/article-details/:id" element={<ArticlesDetails />} />
         <Route path="/our-work" element={<OurWorkCase />} />
         <Route path="/work-case/:id" element={<Unilever />} />
+        <Route path="/articles-list" element={<ArticlesList />} />
+        <Route path="/article-details/:id" element={<ArticlesDetails />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>

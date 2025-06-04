@@ -6,7 +6,7 @@ export default function FloatingBlob() {
       <div className="relative flex items-center justify-center">
         {/* First Large Blob - Moving Only on X-axis */}
         <motion.div
-          className="absolute w-[200px] h-[200px] xs-small:w-[400px] xs-small:h-[400px] rounded-full opacity-70 blur-md"
+          className="absolute w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] 2xl:w-[600px] 2xl:h-[600px] rounded-full opacity-70 blur-md"
           style={{
             background: `conic-gradient(from 0deg, 
               #0060BA 0%, 
@@ -30,7 +30,7 @@ export default function FloatingBlob() {
 
         {/* Second Blob - Circular Motion */}
         <motion.div
-          className="absolute w-[300px] h-[300px] xs-small:w-[400px] xs-small:h-[400px] rounded-full opacity-60 blur-md"
+          className="absolute w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] 2xl:w-[500px] 2xl:h-[500px] rounded-full opacity-60 blur-md"
           style={{
             background: `radial-gradient(circle at 30% 70%, 
               #9747FF 0%, 
@@ -59,7 +59,7 @@ export default function FloatingBlob() {
 
         {/* Third Blob for more depth */}
         <motion.div
-          className="absolute w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full opacity-50 blur-lg"
+          className="absolute w-[150px] h-[150px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] 2xl:w-[600px] 2xl:h-[600px] rounded-full opacity-50 blur-lg"
           style={{
             background: `linear-gradient(135deg, 
               #9747FF 0%, 
@@ -90,7 +90,7 @@ export default function FloatingBlob() {
           <img
             src="/svg/homeanime_1.svg"
             alt=""
-            className="w-[400px] md-base:w-[500px]"
+            className="w-[400px] md-base:w-[500px] lg:w-[800px]"
           />
         </div>
       </div>

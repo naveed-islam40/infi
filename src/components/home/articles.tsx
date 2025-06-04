@@ -19,7 +19,7 @@ const articles: Article[] = [
     title:
       "How to Build an Enterprise Game Platform for Millions of Players (1/3)",
     slug: "build-enterprise-game-platform",
-    imageSrc: "/png/mobile-blog.png",
+    imageSrc: "/png/blog5.png",
   },
   {
     id: "2",
@@ -33,39 +33,43 @@ const articles: Article[] = [
     number: "03",
     title: "How to write good automated text?",
     slug: "write-good-automated-text",
-    imageSrc: "/png/mobile-blog.png",
+    imageSrc: "/png/blog6.png",
   },
 ];
 
 export default function ArticlesInsights() {
   return (
-    <div className="w-full px-8  mx-auto lg:max-w-6xl 2xl:max-w-7xl relative my-10">
-      <div className="flex text-sm text-[#003262] mb-6">
-        <span className="xl:absolute -left-7">/ 04</span>
-        <span className="mx-2">/</span>
-        <span>Articles</span>
+    <div className="w-full px-8  mx-auto lg:max-w-6xl 2xl:max-w-7xl relative my-10 md:my-40">
+      <div>
+        <div className="flex text-[#003262] mb-6 text-base xl:text-xl font-semibold">
+          <span className="1500:absolute -left-32">/ 04</span>
+          <span className="mx-2">/</span>
+          <span>Articles</span>
+        </div>
+
+        <h2 className="text-xl md:text-2xl lg:text-4xl font-medium text-[#003262] my-10 hover:text-[#65A30D] transition-colors duration-500 max-w-2xl">
+          Welcome to our Insights where technology meets real-world problem
+          solving.
+        </h2>
+
+        <p className="text-[#4B5563] mb-12 max-w-2xl text-base md:text-xl">
+          We share hands-on tips, industry trends, and lessons learned from
+          building software that scales. Whether you're a developer, product
+          thinker, or just tech-driven soul, you'll find our articles worth your
+          time.
+        </p>
       </div>
-
-      <h2 className="text-xl md:text-2xl lg:text-4xl font-medium text-[#65A30D] my-10 hover:text-[#003262] transition-colors duration-500 max-w-2xl">
-        Welcome to our Insights where technology meets real-world problem
-        solving.
-      </h2>
-
-      <p className="text-[#4B5563] mb-12 max-w-2xl ">
-        We share hands-on tips, industry trends, and lessons learned from
-        building software that scales. Whether you're a developer, product
-        thinker, or just tech-driven soul, you'll find our articles worth your
-        time.
-      </p>
 
       <div className="space-y-6 hidden md:block">
         {articles.map((article) => (
           <div key={article.id} className="pb-6 group relative">
-            <div className="flex items-start justify-between py-4 group-hover:opacity-0">
-              <span className="text-[#003262] w-12">{article.number}</span>
+            <div className="flex items-start justify-between py-4 group-hover:opacity-0 mb-6">
+              <span className="text-[#003262] w-12 text-2xl font-semibold">
+                {article.number}
+              </span>
               <Link
                 to={`/articles/${article.slug}`}
-                className="text-[#003262] hover:text-blue-900 font-medium"
+                className="text-[#003262] hover:text-blue-900 font-medium text-2xl"
               >
                 {article.title}
               </Link>
@@ -84,7 +88,7 @@ export default function ArticlesInsights() {
                 <div className="flex items-center justify-between ">
                   <div className="flex items-center gap-20">
                     <motion.span
-                      className="text-xl font-bold text-[#65A30D] mb-10"
+                      className="text-2xl font-bold text-[#65A30D] mb-10"
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1, duration: 0.3 }}
@@ -104,11 +108,11 @@ export default function ArticlesInsights() {
                     />
                   </div>
                   <Link
-                    to={`/article-details/${article.slug}`}
+                    to={`/article-details/${article.slug}?title=${article.title}`}
                     className="mb-10"
                   >
                     <motion.span
-                      className="text-xl font-semibold text-[#65A30D] flex items-center gap-2"
+                      className="text-2xl font-semibold text-[#65A30D] flex items-center gap-2"
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1, duration: 0.3 }}
@@ -134,7 +138,7 @@ export default function ArticlesInsights() {
           icon="/svg/Property 54.svg"
           parentclasName="relative inline-block"
           cicleClassName="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
-          linkClassName="flex items-center text-[#003262] relative z-10"
+          linkClassName="flex items-center text-[#003262] relative z-10 gap-3 font-medium"
         />
       </div>
     </div>

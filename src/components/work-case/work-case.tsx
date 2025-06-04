@@ -52,38 +52,38 @@ export function WorkSection() {
     },
   ];
   return (
-    <main className="w-full px-6 py-12">
+    <main className="w-full py-12 pt-40">
       <div className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         <div className="mb-12">
           <div className="mb-12">
-            <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2">
-              <span className="xl:absolute -left-7">/ 01</span>
-              <span className="mx-2">/</span>
-              <span className="text-lg font-semibold">Work</span>
+            <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-base md:text-2xl">
+              <span className="xl:absolute -left-32">/ 01</span>
+              <span>/</span>
+              <span>Work</span>
             </div>
             <div className=" pt-5 rounded-lg">
-              <p className="text-[#003262] md:w-[32rem] text-xl md:text-4xl font-semibold">
+              <p className="text-[#003262] md:w-[45rem] text-xl md:text-6xl font-semibold">
                 We turn ideas into reality, blending strategy with creativity
               </p>
             </div>
           </div>
 
           <div className="flex justify-end">
-            <p className="text-[#4B5563] text-sm leading-relaxed w-[25rem]">
+            <p className="text-[#4B5563] text-base md:text-xl leading-relaxed w-[25rem] ">
               Each project is a unique story driven by passion, precision, and
               results. Discover how we help brands grow and stand out in the
               digital world.
             </p>
           </div>
         </div>
-        <div className="space-y-8 hidden md:block">
+        <div className="space-y-8 hidden md:block pt-20">
           {caseStudies.map((study) => (
             <div key={study.id} className="pb-6 group relative">
               <div className="flex justify-between items-center group-hover:opacity-0">
-                <span className="text-[#003262] text-lg font-mono">
+                <span className="text-[#003262] text-3xl font-mono">
                   {study.id}
                 </span>
-                <h3 className="text-xl font-semibold text-[#003262] text-right flex-1 ml-8">
+                <h3 className="text-3xl font-semibold text-[#003262] text-right flex-1 ml-8">
                   {study.title}
                 </h3>
               </div>
@@ -100,7 +100,7 @@ export function WorkSection() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-20">
                       <motion.span
-                        className="text-xl font-bold text-[#65A30D] mb-10"
+                        className="text-2xl font-bold text-[#65A30D] mb-10"
                         initial={{ x: -20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.3 }}
@@ -121,7 +121,7 @@ export function WorkSection() {
                     </div>
                     <Link to={`/work-case/${study.id}`} className="mb-10">
                       <motion.span
-                        className="text-xl font-semibold text-[#65A30D] flex items-center gap-2"
+                        className="text-3xl font-semibold text-[#65A30D] flex items-center gap-2"
                         initial={{ x: -20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.3 }}

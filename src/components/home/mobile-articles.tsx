@@ -20,7 +20,7 @@ export default function MobileArticles() {
 
       {/* Title */}
       <div className="pb-4">
-        <h2 className="text-lg font-semibold text-[#003262] leading-tight pt-3">
+        <h2 className="text-base font-semibold text-[#003262] leading-tight pt-3">
           How to Build an Enterprise Game Platform for Millions of Players (1/3)
         </h2>
       </div>

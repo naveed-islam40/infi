@@ -25,12 +25,12 @@ export default function VisionMission() {
 
       {/* Card Container */}
       <div className="relative w-full lg:max-w-6xl 2xl:max-w-7xl mx-auto md:px-8">
-        <div className="backdrop-blur-md md:rounded-3xl p-8 md:p-10 shadow-lg bg-gradient-to-r from-white to-[#B8DAFB99] h-[300px]">
+        <div className="backdrop-blur-md md:rounded-3xl p-8 lg:p-20 shadow-lg bg-gradient-to-r from-white to-[#B8DAFB99] h-[300px] lg:h-[500px]">
           <div className=" flex items-start justify-between">
             {/* Tabs */}
             <div className="flex gap-6 mb-8 text-sm md:text-base">
               <button
-                className={`text-[#003262] flex items-center ${
+                className={`text-[#003262] flex items-center text-xl xl:text-4xl ${
                   activeTab === "vision" ? "font-medium" : "opacity-60"
                 }`}
                 onMouseEnter={() => setActiveTab("vision")}
@@ -38,7 +38,7 @@ export default function VisionMission() {
                 / Vision
               </button>
               <button
-                className={`text-[#003262] flex items-center ${
+                className={`text-[#003262] flex items-center text-xl xl:text-4xl ${
                   activeTab === "mission" ? "font-medium" : "opacity-60"
                 }`}
                 onMouseEnter={() => setActiveTab("mission")}
@@ -48,13 +48,13 @@ export default function VisionMission() {
             </div>
             {/* Navigation Button */}
             <button
-              className="w-10 h-10 rounded-full border border-[#003262] flex items-center justify-center text-[#003262] transition-colors  hover:text-white"
+              className="w-12 h-12 lg:w-24 lg:h-25 rounded-full border border-[#003262] flex items-center justify-center text-[#003262] transition-colors"
               onClick={() =>
                 setActiveTab(activeTab === "vision" ? "mission" : "vision")
               }
             >
               <ArrowRight
-                size={18}
+                size={25}
                 className={activeTab === "vision" ? "" : "rotate-45"}
               />
             </button>
@@ -69,7 +69,7 @@ export default function VisionMission() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="text-[#003262] text-sm md:text-base max-w-xl mb-4 absolute"
+                className="text-[#003262] text-base md:text-xl xl:text-2xl font-semibold max-w-xl mb-4 absolute py-8 lg:py-20"
               >
                 {tabContent[activeTab]}
               </motion.p>

@@ -21,21 +21,21 @@ export default function EndToEndProductDetails() {
   };
 
   return (
-    <section className="bg-white">
-      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative my-5">
+    <section className="pb-40">
+      <div className="w-full mx-auto px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
         {/* Header with breadcrumb and icon */}
         <div className="flex justify-between items-center mb-16  border-b border-[#84CC16] pb-5">
-          <div className="text-sm flex flex-col ">
+          <div className="text-sm md:text-xl flex flex-col">
             <div>
               <span className="text-[#84CC16] font-medium">01</span>
               <span className="text-[#84CC16] mx-2">/</span>
               <span className="text-[#84CC16]">04</span>
             </div>
-            <span className="text-[#003262]  md:ml-6 font-bold">
+            <span className="text-[#003262]  md:ml-20 font-semibold">
               End-to-End Digital Products
             </span>
           </div>
-          <div className="w-14 h-14 rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
             <img
               src="/svg/arrow_brown.svg"
               alt=""
@@ -61,7 +61,7 @@ export default function EndToEndProductDetails() {
                 {/* Main heading */}
                 <div className="md:text-end mb-20">
                   <h2
-                    className="hidden md:block text-5xl md:text-6xl font-bold text-[#0060BA] leading-tight 
+                    className="hidden md:block text-5xl md:text-8xl font-bold text-[#0060BA] leading-tight 
             hover:text-[#84CC16] transition-colors duration-500"
                   >
                     {tab.title}
@@ -85,7 +85,7 @@ export default function EndToEndProductDetails() {
                   </div>
 
                   <div className="order-1 md:order-2">
-                    <p className="text-gray-600 text-sm md:text-lg leading-relaxed">
+                    <p className="text-[#4B5563] text-sm md:text-xl leading-relaxed font-semibold">
                       {tab.description}
                     </p>
                   </div>

@@ -6,8 +6,16 @@ export default function Footer() {
   const handleNavigate = () => {
     navigate("/contact");
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden py-10">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -22,17 +30,19 @@ export default function Footer() {
         <div>
           <p className="text-lg md:text-xl opacity-90 mb-2">Have an idea?</p>
           {/* Mobile  */}
-          <div
-            className="flex justify-between lg:hidden items-center border-b border-[#84CC16] mb-10 cursor-pointer"
-            onClick={handleNavigate}
-          >
-            <span className="flex items-center gap-2">
+          <div className="flex justify-between lg:hidden items-center border-b border-[#84CC16] mb-10 cursor-pointer">
+            <span className="flex items-center gap-2" onClick={handleNavigate}>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#84CC16]">
                 Let's Talk
               </h2>
               <img src="/svg/arrow_brown.svg" alt="" className="w-14" />
             </span>
-            <img src="/svg/chevron-double-up.svg" alt="" className="w-6" />
+            <img
+              src="/svg/chevron-double-up.svg"
+              alt=""
+              className="w-6"
+              onClick={scrollToTop}
+            />
           </div>
 
           <div
@@ -80,7 +90,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 cursor-pointer">
+            <div
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={scrollToTop}
+            >
               <button className="px-3 py-3 text-white font-medium rounded-md transition-colors">
                 Back to Top
               </button>

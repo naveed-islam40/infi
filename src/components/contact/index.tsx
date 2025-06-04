@@ -6,11 +6,11 @@ export function ContactForm() {
   return (
     <div className="">
       <Navbar />
-      <main className="w-full mx-auto 2xl:max-w-9xl min-h-screen sm:flex flex-col justify-between lg:flex-row hidden">
+      <main className="w-full min-h-screen sm:flex flex-col justify-between lg:flex-row hidden">
         {/* Left Side - Dark Blue */}
-        <div className="lg:w-1/2 bg-[#003262] text-white p-8 flex flex-col justify-between px-6 md:px-20 order-2 lg:order-1">
+        <div className="w-[600px] bg-[#003262] text-white p-8 flex flex-col justify-between px-6 md:px-20 order-2 lg:order-1">
           <div>
-            <h1 className="text-4xl font-semibold mb-8 leading-tight">
+            <h1 className="text-4xl font-semibold mb-8 leading-tight pt-20">
               Let's work together
             </h1>
             <div className="mb-12">
@@ -73,16 +73,16 @@ export function ContactForm() {
           </div>
         </div>
         {/* Right Side - Light Background */}
-        <div className="w-full bg-[#FFFFFF] p-8 flex flex-col justify-center pr-6 md:pr-20 order-1 lg:order-2">
+        <div className="w-full bg-[#FFFFFF] p-8 flex flex-col justify-center pr-6 md:pr-20 order-1 lg:order-2 max-w-4xl mx-auto py-40">
           <div className="lg:px-20">
             <h2 className="text-4xl font-bold text-[#003262] mb-2">
               We'd love to hear from you
             </h2>
-            <p className="text-[#65A30D] text-sm mb-8">
+            <p className="text-[#65A30D] text-xl mb-8 font-medium">
               Contact us regarding any <br />
               <span>concerns</span> or <span>inquiries.</span>
             </p>
-            <form className="space-y-6">
+            <form className="space-y-6 mt-20">
               {/* Name Fields */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -131,7 +131,7 @@ export function ContactForm() {
                 path="#"
                 parentclasName="inline-flex relative"
                 cicleClassName="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
-                linkClassName="flex items-center gap-2 text-[#003262] transition-colors mt-5 relative z-10"
+                linkClassName="flex items-center gap-2 text-[#003262] transition-colors mt-5 relative z-10 font-medium"
               />
             </form>
           </div>

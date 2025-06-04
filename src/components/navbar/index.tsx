@@ -26,8 +26,8 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`w-full fixed z-50 top-0  ${bg()}`} ref={menuRef}>
-      <div className="w-full lg:max-w-6xl  2xl:max-w-7xl mx-auto flex justify-between md:justify-end gap-4 items-center p-6 ">
+    <nav className={`w-full fixed z-50 top-0 py-5 ${bg()}`} ref={menuRef}>
+      <div className="w-full lg:max-w-6xl xl:max-w-[1400px] 2xl:max-w-9xl mx-auto flex justify-between md:justify-end gap-4 items-center px-8">
         <Link to="/" className="z-10">
           <img
             src="/svg/Vector.svg"

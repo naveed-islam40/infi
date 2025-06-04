@@ -42,7 +42,7 @@ const services: ServiceItem[] = [
 
 export default function ServicesGrid() {
   return (
-    <div className="container mx-auto px-6 md:px-20 py-16 md:py-24 bg-[#F3F4F6] rounded-xl">
+    <div className="px-6 md:px-40 py-16 md:py-28 bg-[#F3F4F6] rounded-4xl lg:mx-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {services.map((service) => (
           <Link
@@ -57,14 +57,14 @@ export default function ServicesGrid() {
               transition={{ duration: 0.3 }}
               className="group-hover:opacity-0"
             >
-              <span className="text-[#003262] font-semibold text-4xl">
+              <span className="text-[#003262] font-semibold text-2xl lg:text-4xl">
                 {service.number}
               </span>
-              <div>
-                <h3 className="text-[#003262] font-medium text-2xl">
+              <div className="pt-5">
+                <h3 className="text-[#003262] font-medium text-2xl lg:text-4xl">
                   {service.title}
                 </h3>
-                <p className="text-[#003262] font-medium text-2xl">
+                <p className="text-[#003262] font-medium text-2xl lg:text-4xl">
                   {service.description}
                 </p>
               </div>

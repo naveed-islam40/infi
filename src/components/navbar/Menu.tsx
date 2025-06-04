@@ -19,27 +19,27 @@ export default function Menu({ onClose }: { onClose: () => void }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 overflow-y-auto md:overflow-hidden w-[80%] transition-transform duration-1000 ease-in-out bg-white rounded-l-4xl ${
-        isVisible ? "translate-x-[25%]" : "translate-x-[130%]"
+      className={`fixed inset-0 z-50 overflow-y-auto md:overflow-hidden w-[90%] transition-transform duration-1000 ease-in-out backdrop-blur-md rounded-l-4xl ${
+        isVisible ? "translate-x-[15%]" : "translate-x-[100%]"
       }`}
     >
       {/* Slide-in Panel */}
       <div
-        className={`bg-gradient-to-l from-[#B8DAFB99] to-[#FFFFFF] min-h-screen w-full p-4 md:p-8 absolute top-0 right-0 transition-transform duration-1000 ease-in-out  ${
+        className={`bg-gradient-to-l from-[#B8DAFB99] to-[#FFFFFF] min-h-screen w-full p-4 md:p-16 absolute top-0 right-0 transition-transform duration-1000 ease-in-out  ${
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close and content */}
         <div className="w-full lg:max-w-6xl 2xl:max-w-9xl mx-auto">
-          <div className="flex justify-between items-center mb-8 md:mb-12">
+          <div className="flex justify-between items-center mb-8 md:mb-12 pr-20">
             <img src="/svg/Logotype.svg" alt="" className="w-44" />
 
             <button
               id="menu-close-button"
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-slate-400 flex items-center justify-center hover:bg-slate-200 transition-colors cursor-pointer"
+              className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-[#003262] flex items-center justify-center transition-colors cursor-pointer"
               onClick={handleClose}
             >
-              <X className="w-4 h-4 md:w-5 md:h-5 text-slate-600 " />
+              <X className="w-4 h-4 md:w-5 md:h-5 text-[#003262]" />
             </button>
           </div>
 
@@ -95,7 +95,7 @@ export default function Menu({ onClose }: { onClose: () => void }) {
                   </div>
                 </div>
 
-                <p className="text-base text-[#003262]">
+                <p className="text-base text-[#003262] py-8">
                   © 2025 Infinity Mesh. All rights reserved.
                 </p>
               </div>
@@ -107,49 +107,49 @@ export default function Menu({ onClose }: { onClose: () => void }) {
                 <Link
                   to="/"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   Home
                 </Link>
                 <Link
                   to="/who-we-are"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   Who We Are
                 </Link>
                 <Link
                   to="/what-we-do"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   What We Do
                 </Link>
                 <Link
                   to="/our-work"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   Work
                 </Link>
                 <Link
                   to="/articles-list"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   Articles
                 </Link>
                 <Link
                   to="/contact"
                   onClick={handleClose}
-                  className="block text-2xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
+                  className="block text-4xl font-medium text-[#003262] hover:scale-130 transition-transform duration-300 ease-out origin-left"
                 >
                   Contact
                 </Link>
               </nav>
 
               {/* Footer Links */}
-              <div className="flex gap-6 pt-8">
+              <div className="flex gap-6 py-8">
                 <Link
                   to="/privacy-policy"
                   className="text-[#003262] transition-colors"

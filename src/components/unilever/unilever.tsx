@@ -9,20 +9,24 @@ import TestimonialDesktop from "../what-we-do/testimonial-desktop";
 export function CaseStudyPage() {
   const navigate = useNavigate();
   return (
-    <main className="w-full">
+    <main className="w-full pt-20">
       {/* Breadcrumb and Title */}
-      <div className="md:px-6 py-8">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto  relative">
-          <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 pl-5">
-            <span className="xl:absolute -left-7">/ 02</span>
-            <span className="mx-2">/</span>
-            <span className="text-lg font-semibold">Case Study</span>
+      <div className="py-8">
+        <div className="max-w-3xl lg:max-w-6xl px-8 xl:px-0 2xl:max-w-7xl mx-auto relative">
+          <div className="text-[#65A30D] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-2xl">
+            <span className="1500:absolute -left-32">/ 02</span>
+            <span>/</span>
+            <span>Case Study</span>
           </div>
+
+          <h1 className="text-2xl md:text-5xl font-semibold text-[#003262] py-10">
+            Unilever
+          </h1>
         </div>
       </div>
       {/* Hero Image */}
       <div className="md:px-6 mb-12">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto ">
+        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-9xl mx-auto">
           <img
             src="/png/blog4.png"
             alt="Unilever building exterior"
@@ -38,10 +42,10 @@ export function CaseStudyPage() {
             <div className="lg:col-span-2 space-y-12">
               {/* Get to Know Unilever */}
               <section>
-                <h2 className="text-2xl font-semibold text-[#0060BA] mb-6">
+                <h2 className="text-2xl font-bold text-[#0060BA] mb-6">
                   Get to Know Unilever
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
                   Unilever is a British-Dutch transnational consumer goods
                   company co-headquartered in London, United Kingdom and
                   Rotterdam, Netherlands. Its products include food and
@@ -55,10 +59,10 @@ export function CaseStudyPage() {
               </section>
               {/* The Challenge */}
               <section>
-                <h2 className="text-2xl font-semibold text-[#0060BA] mb-6">
+                <h2 className="text-2xl font-bold text-[#0060BA] mb-6">
                   The Challenge
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
                   With the diverse number of projects, Unilever was working on,
                   it was becoming increasingly difficult to manage them.
                   Consolidating available data and getting proper status updates
@@ -78,10 +82,10 @@ export function CaseStudyPage() {
               </section>
               {/* The Solution */}
               <section>
-                <h2 className="text-2xl font-semibold text-[#0060BA] mb-6">
+                <h2 className="text-2xl font-bold text-[#0060BA] mb-6">
                   The Solution
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
                   While the client was still figuring out the nuances of their
                   large business data model, we were engaged to develop a
                   content project management tool on top of that model. We
@@ -95,10 +99,10 @@ export function CaseStudyPage() {
               </section>
               {/* The Results */}
               <section>
-                <h2 className="text-2xl font-semibold text-[#0060BA] mb-6">
+                <h2 className="text-2xl font-bold text-[#0060BA] mb-6">
                   The Results
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
                   Even though we delivered the project within the given
                   timeframe, the client was very satisfied with the final
                   result. By providing various information on one page in a
@@ -107,6 +111,23 @@ export function CaseStudyPage() {
                   get to where they want to be.
                 </p>
               </section>
+              <div className="px-6 mb-16 hidden md:block">
+                <div className="flex justify-between items-center">
+                  <AnimatedButton2
+                    buttonText="All Case Study"
+                    orderIcon="order-1"
+                    orderText="order-2"
+                    handleClick={() => navigate("/our-work")}
+                  />
+
+                  <AnimatedButton2
+                    buttonText="Next Case Study"
+                    orderIcon="order-2"
+                    orderText="order-1"
+                    handleClick={() => navigate("/work-case/02")}
+                  />
+                </div>
+              </div>
             </div>
             {/* Sidebar */}
             <div className="lg:col-span-1 border-t border-gray-200 pt-5 hidden md:block">
@@ -156,32 +177,14 @@ export function CaseStudyPage() {
         </div>
       </div>
       {/* Navigation */}
-      <div className="px-6 mb-16 hidden md:block">
-        <div className="max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto ">
-          <div className="flex justify-between items-center">
-            <AnimatedButton2
-              buttonText="All Case Study"
-              orderIcon="order-1"
-              orderText="order-2"
-              handleClick={() => navigate("/our-work")}
-            />
 
-            <AnimatedButton2
-              buttonText="Next Case Study"
-              orderIcon="order-2"
-              orderText="order-1"
-              handleClick={() => navigate("/work-case/02")}
-            />
-          </div>
-        </div>
-      </div>
       {/* Testimonial Section */}
-      <div className="bg-gray-100 py-16 px-6 hidden md:block">
+      <div className="bg-gray-100 py-28 px-6 hidden md:block">
         <div className="max-w-3xl lg:max-w-7xl 2xl:max-w-7xl mx-auto relative">
-          <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2">
-            <span className="xl:absolute -left-7">/ 02</span>
-            <span className="mx-2">/</span>
-            <span className="text-lg font-semibold">What Our Clients Say</span>
+          <div className="text-[#003262] mb-2 md:mb-4 flex items-center gap-2 font-semibold text-2xl pb-10">
+            <span className="xl:absolute -left-32">/ 02</span>
+            <span>/</span>
+            <span>What Our Clients Say</span>
           </div>
 
           <TestimonialDesktop />

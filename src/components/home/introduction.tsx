@@ -14,12 +14,12 @@ export default function Introduction() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-      className="bg-white text-black py-10 h-full w-full"
+      className="bg-white text-black py-10 min-h-screen w-full pt-20"
     >
       <section className="mx-auto w-full px-8 lg:max-w-6xl 2xl:max-w-7xl relative">
-        <div className="mb-8 flex items-center gap-2 text-sm">
-          <span className="text-[#003262] xl:absolute -left-7">/02</span>
-          <span className="text-[#003262] mx-2">/</span>
+        <div className="mb-8 flex items-center gap-2 text-base xl:text-xl font-semibold">
+          <span className="text-[#003262] 1500:absolute -left-32">/02</span>
+          <span className="text-[#003262]">/</span>
           <span className="text-[#003262]">Introduction</span>
         </div>
 
@@ -33,12 +33,12 @@ export default function Introduction() {
           }}
           whileInView={{ color: "#003262", y: 0 }}
         >
-          <h2 className="text-xl md:text-2xl lg:text-4xl font-medium mb-8 leading-tight">
+          <h2 className="text-xl md:text-2xl lg:text-5xl font-medium mb-8 leading-tight">
             We were founded on a simple belief: that great code can spark real,
             lasting change in the way businesses grow, scale, and lead.
           </h2>
 
-          <p className="text-sm md:text-base mb-12 max-w-xl">
+          <p className="text-base xl:text-2xl mb-12 max-w-xl font-semibold">
             We are a world-class team of industry-leading professionals, who
             constantly push new technology to its limits.
           </p>

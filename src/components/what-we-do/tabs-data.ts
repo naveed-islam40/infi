@@ -40,7 +40,7 @@ export const  testimonialData = [
     role: "",
     message: `
     High quality, delivery exceeds. High value, great value for the money. Fast turnaround, working in multiple zones makes turn around time faster. 
-    The team is a pleasure to work with.
+    <strong>The team is a pleasure to work with</strong>.
     `
   },
    {

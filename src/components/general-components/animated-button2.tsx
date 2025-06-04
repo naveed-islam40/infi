@@ -19,7 +19,7 @@ export default function AnimatedButton2({
     <div className="flex items-center justify-center">
       <motion.button
         onClick={handleClick}
-        className="relative flex items-center gap-2 px-6 py-4 bg-white rounded-lg overflow-hidden cursor-pointer"
+        className="relative flex items-center gap-2 py-4 bg-white rounded-lg overflow-hidden cursor-pointer"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         whileTap={{ scale: 0.98 }}
@@ -57,7 +57,7 @@ export default function AnimatedButton2({
 
         {/* Text */}
         <motion.span
-          className={`${orderText} text-2xl font-bold order-1 whitespace-nowrap`}
+          className={`${orderText} text-4xl font-bold order-1 whitespace-nowrap`}
           animate={{
             color: isHovered ? "#84CC16" : "#0060BA",
           }}

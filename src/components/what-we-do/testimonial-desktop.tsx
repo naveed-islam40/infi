@@ -32,13 +32,14 @@ const TestimonialDesktop = () => {
               <img src="/svg/Quote icon.svg" alt="" />
 
               {/* Testimonial text */}
-              <blockquote className="text-gray-700 text-lg leading-relaxed mb-8 max-w-2xl ml-28">
-                {item.message}
-              </blockquote>
+              <blockquote
+                className="text-gray-700 text-lg md:text-2xl leading-relaxed mb-8 max-w-3xl ml-28"
+                dangerouslySetInnerHTML={{ __html: item.message }}
+              ></blockquote>
 
               {/* Author */}
               <div className="flex flex-col">
-                <cite className="text-[#0060BA] font-medium not-italic ml-28">
+                <cite className="text-[#0060BA] font-medium not-italic ml-28 text-2xl">
                   {item.user}
                 </cite>
                 <cite className="text-[#4B5563] font-medium not-italic ml-28">
@@ -48,7 +49,7 @@ const TestimonialDesktop = () => {
 
               {/* Circular arrow icon */}
               <div className="absolute bottom-8 right-8">
-                <div className="w-10 h-10 border-2 border-[#0060BA] rounded-full flex items-center justify-center cursor-pointer">
+                <div className="w-14 h-14 border-2 border-[#0060BA] rounded-full flex items-center justify-center cursor-pointer">
                   <svg
                     className="w-5 h-5 text-[#0060BA]"
                     fill="none"

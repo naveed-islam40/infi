@@ -15,10 +15,10 @@ export default function StatsComponent() {
             key={index}
             className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0"
           >
-            <div className="text-[#003262] text-base md:text-lg font-medium border-b border-gray-200 w-full pb-3 md:pb-5">
+            <div className="text-[#003262] text-xl md:text-3xl font-medium border-b border-gray-200 w-full pb-3 md:pb-5">
               {stat.label}
             </div>
-            <div className="text-gray-300 text-5xl md:text-7xl lg:text-9xl font-bold md:pl-8 hover:text-lime-500 transition duration-300 ease-in-out">
+            <div className="text-gray-300 text-5xl md:text-7xl lg:text-[250px] font-bold md:pl-8 hover:text-lime-500 transition duration-300 ease-in-out">
               {stat.value}
             </div>
           </div>
