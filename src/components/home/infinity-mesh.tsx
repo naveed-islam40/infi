@@ -52,12 +52,12 @@ export default function InFinityMesh() {
   return (
     <main
       ref={mainRef}
-  className="h-screen overflow-y-scroll scrollbar-hide"
+  className="lg:h-screen overflow-y-scroll scrollbar-hide"
       style={{ scrollSnapType: "y mandatory" }}
     >
       {/* Section 1 */}
       <section
-        className=" bg-gradient-to-r from-[#014789] to-[#001930] text-white pt-10  flex flex-col justify-center px-5"
+        className=" bg-gradient-to-r from-[#014789] to-[#001930] text-white pb-20 lg:pb-0 pt-20 lg:pt-10  flex flex-col justify-center px-5"
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="grid lg:grid-cols-2 w-[90%] 2xl:max-w-9xl mx-auto pt-5 md:pt-10 lg:pt-20 pb-0 xl:pt-20 xl:pb-10">
@@ -96,7 +96,7 @@ export default function InFinityMesh() {
 
       {/* Section 2 */}
       <section
-        className="h-screen bg-gray-900 text-white flex items-center justify-center text-3xl font-bold"
+        className=" lg:h-screen bg-gray-900 text-white flex items-center justify-center text-3xl font-bold"
         style={{ scrollSnapAlign: "start" }}
       >
     <Introduction />
