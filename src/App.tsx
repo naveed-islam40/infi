@@ -11,6 +11,8 @@ import { ContactForm } from "./components/contact";
 import { PrivacyPolicy } from "./components/privacy-policy";
 import Navbar from "./components/navbar";
 import ScrollToTop from "./components/general-components/ScrollToTop";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const App = () => {
   const { pathname } = useLocation();
