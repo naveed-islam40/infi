@@ -57,7 +57,7 @@ export default function InFinityMesh() {
     >
       {/* Section 1 */}
       <section
-        className=" bg-gradient-to-r from-[#014789] to-[#001930] text-white pb-20 lg:pb-0 pt-20 lg:pt-10  flex flex-col justify-center px-5"
+        className="h-screen bg-gradient-to-r from-[#014789]  to-[#001930] text-white pb-20 md:pb-60  lg:pb-0 pt-20 lg:pt-10  flex flex-col justify-center px-5"
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="grid lg:grid-cols-2 w-[90%] 2xl:max-w-9xl mx-auto pt-5 md:pt-10 lg:pt-20 pb-0 xl:pt-20 xl:pb-10">
@@ -82,13 +82,13 @@ export default function InFinityMesh() {
                 ideas into high-impact products.
               </p>
 
-              <div className="hidden lg:block mt-40">
+              <div className="hidden lg:block mt-10 2xl:mt-20">
                 <ScrollAnimation handleClick={handleClick} />
               </div>
             </div>
           </div>
 
-          <div className="md:w-[80%] mx-auto lg:mr-0 lg:ml-auto mt-20 lg:mt-0">
+          <div className="md:w-[75%] mx-auto lg:mr-0 lg:ml-auto mt-10 lg:mt-0">
             <HomeAnimation />
           </div>
         </div>

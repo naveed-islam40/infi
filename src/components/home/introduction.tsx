@@ -14,7 +14,7 @@ export default function Introduction() {
         duration: 1.5,
         ease: "easeInOut",
       }}
-      className="bg-white text-black pt-10 pb-20 md:pt-20 md:pb-28 w-full "
+      className="lg:h-screen bg-white text-black pt-10 pb-20 md:pt-20  md:pb-28 w-full "
     >
       <section className="grid lg:grid-cols-12 w-[90%] mx-auto 2xl:max-w-9xl">
         <div className="lg:col-span-10 xl:col-span-8 self-center grid lg:grid-cols-12">
@@ -31,7 +31,7 @@ export default function Introduction() {
             </div>
 
             <motion.div
-              className="mt-32 md:mt-40"
+              className="mt-32 md:mt-40 lg:mt-20"
               initial={{ color: "#65A30D", y: 100 }}
               transition={{
                 duration: 1,
