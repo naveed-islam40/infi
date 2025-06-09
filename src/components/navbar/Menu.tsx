@@ -19,13 +19,13 @@ export default function Menu({ onClose }: { onClose: () => void }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 overflow-y-auto md:overflow-hidden w-[90%] transition-transform duration-1000 ease-in-out backdrop-blur-md rounded-l-4xl ${
+      className={`fixed inset-0 z-50 overflow-y-auto md:overflow-hidden w-[90%] transition-transform duration-1000 ease-in-out  rounded-l-4xl ${
         isVisible ? "translate-x-[15%]" : "translate-x-[100%]"
       }`}
     >
       {/* Slide-in Panel */}
       <div
-        className={`bg-gradient-to-l from-[#B8DAFB99] to-[#FFFFFF] min-h-screen w-full p-4 md:p-16 absolute top-0 right-0 transition-transform duration-1000 ease-in-out  ${
+        className={`bg-gradient-to-l from-[#B8DAFB99] to-[#FFFFFF] backdrop-blur-md min-h-screen w-full p-4 md:p-16 absolute top-0 right-0 transition-transform duration-1000 ease-in-out  ${
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
