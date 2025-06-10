@@ -1,6 +1,34 @@
+import { useRef } from "react";
 import AnimateButton from "../general-components/animate-button";
+import emailjs from "@emailjs/browser";
 
 export default function Contactmobile() {
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_f31f49o", // e.g. 'service_xxx'
+        "template_pxohfas", // e.g. 'template_yyy'
+        form.current,
+        "e_7ct127NsOiQaUny" // e.g. 'user_zzz'
+      )
+      .then(
+        (result: any) => {
+          console.log("Email sent:", result.text);
+        },
+        (error: any) => {
+          console.error("Email error:", error.text);
+        }
+      );
+  };
+
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -24,13 +52,15 @@ export default function Contactmobile() {
             Contact us regarding any concerns or inquiries.
           </p>
 
-          <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6 mt-20">
+
             <div className="space-y-2 flex flex-col">
               <label htmlFor="firstName" className="text-[#1e3a5f] font-medium">
                 First Name
               </label>
               <input
-                id="firstName"
+                    type="text"
+                    name="first_name"
                 className="bg-gray-100 border-0 h-12 text-[#1e3a5f] rounded-lg"
                 placeholder=""
               />
@@ -41,7 +71,8 @@ export default function Contactmobile() {
                 Last Name
               </label>
               <input
-                id="lastName"
+                                    type="text"
+                    name="last_name"
                 className="bg-gray-100 border-0 h-12 text-[#1e3a5f] rounded-lg"
                 placeholder=""
               />
@@ -52,7 +83,8 @@ export default function Contactmobile() {
                 Company
               </label>
               <input
-                id="company"
+                  type="text"
+                  name="company"
                 className="bg-gray-100 border-0 h-12 text-[#1e3a5f] rounded-lg"
                 placeholder=""
               />
@@ -63,7 +95,8 @@ export default function Contactmobile() {
                 Additional Message
               </label>
               <textarea
-                id="message"
+                  name="message"
+
                 className="bg-gray-100 border-0 min-h-[120px] text-[#1e3a5f] resize-none rounded-lg"
                 placeholder=""
               />
@@ -77,6 +110,8 @@ export default function Contactmobile() {
               <img src="/svg/arrow-top-right.svg" alt="" />
             </button> */}
             <AnimateButton
+                type="submit" // ← Important!
+
               buttonText="Send Message"
               icon="/svg/arrow-top-right.svg"
               path="#"

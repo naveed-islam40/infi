@@ -2,6 +2,17 @@ import { useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+type AnimateButtonProps = {
+  buttonText: string;
+  icon: string;
+  parentclasName?: string;
+  cicleClassName?: string;
+  linkClassName?: string;
+  path?: string;
+  type?: 'button' | 'submit'; // <-- New type
+  onClick?: () => void;
+};
+
 const AnimateButton = ({
   buttonText,
   icon,
@@ -9,14 +20,9 @@ const AnimateButton = ({
   cicleClassName,
   linkClassName,
   path,
-}: {
-  buttonText: string;
-  icon: string;
-  parentclasName?: string;
-  cicleClassName?: string;
-  linkClassName?: string;
-  path: string;
-}) => {
+  type = 'button',
+  onClick,
+}: AnimateButtonProps) => {
   const controls = useAnimation();
 
   const handleMouseEnter = () => {
@@ -40,10 +46,17 @@ const AnimateButton = ({
         transition={{ type: "spring", duration: 1 }}
       />
 
-      <Link to={path} className={linkClassName}>
-        {buttonText}
-        <img src={icon} alt="" />
-      </Link>
+      {type === 'submit' || type === 'button' ? (
+        <button type={type} className={linkClassName} onClick={onClick}>
+          {buttonText}
+          <img src={icon} alt="" />
+        </button>
+      ) : (
+        <Link to={path || '#'} className={linkClassName}>
+          {buttonText}
+          <img src={icon} alt="" />
+        </Link>
+      )}
     </div>
   );
 };

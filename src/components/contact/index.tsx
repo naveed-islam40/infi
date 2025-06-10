@@ -1,8 +1,36 @@
+import { useRef, useState } from "react";
 import AnimateButton from "../general-components/animate-button";
 import Navbar from "../navbar";
 import Contactmobile from "./contact-mobile";
+import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
+  const form = useRef<HTMLFormElement>(null);
+  const [isSent, setIsSent] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_f31f49o", // e.g. 'service_xxx'
+        "template_pxohfas", // e.g. 'template_yyy'
+        form.current,
+        "e_7ct127NsOiQaUny" // e.g. 'user_zzz'
+      )
+      .then(
+        (result: any) => {
+          console.log("Email sent:", result.text);
+          setIsSent(true);
+        },
+        (error: any) => {
+          console.error("Email error:", error.text);
+        }
+      );
+  };
+
   return (
     <div className="">
       <Navbar />
@@ -82,57 +110,69 @@ export function ContactForm() {
               Contact us regarding any <br />
               <span>concerns</span> or <span>inquiries.</span>
             </p>
-            <form className="space-y-6 mt-20">
-              {/* Name Fields */}
+            <form ref={form} onSubmit={sendEmail} className="space-y-6 mt-20">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[#003262] font-semibold text-sm mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-[#1e3a5f]">
                     First Name
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 text-[#003262] bg-[#E5E7EB] border border-gray-200 rounded-lg focus:outline-none focus:border-green-500"
+                    name="first_name"
+                    required
+                    className="w-full px-4 text-[#1e3a5f] py-3 bg-gray-200 border border-gray-300 rounded-lg"
                   />
                 </div>
                 <div>
-                  <label className="block text-[#003262] font-semibold text-sm mb-2">
+                  <label className="block text-sm font-semibold mb-2 text-[#1e3a5f]">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-[#E5E7EB] border text-[#003262] border-gray-200 rounded-lg focus:outline-none focus:border-green-500"
+                    name="last_name"
+                    required
+                    className="w-full px-4 text-[#1e3a5f] py-3 bg-gray-200 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-              {/* Company Field */}
+
               <div>
-                <label className="block text-[#003262] font-semibold text-sm mb-2">
+                <label className="block text-sm font-semibold mb-2 text-[#1e3a5f]">
                   Company
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 bg-[#E5E7EB] text-[#003262] border border-gray-200 rounded-lg focus:outline-none focus:border-green-500"
+                  name="company"
+                  className="w-full px-4 text-[#1e3a5f] py-3 bg-gray-200 border border-gray-300 rounded-lg"
                 />
               </div>
-              {/* Message Field */}
+
               <div>
-                <label className="block text-[#003262] font-semibold text-sm mb-2">
-                  Additional Message
+                <label className="block text-sm font-semibold mb-2 text-[#1e3a5f]">
+                  Message
                 </label>
                 <textarea
-                  rows={6}
-                  className="w-full px-4 py-3 bg-[#E5E7EB] border text-[#003262] border-gray-200 rounded-lg focus:outline-none focus:border-green-500 resize-none"
-                ></textarea>
+                  name="message"
+                  rows={5}
+                  required
+                  className="w-full px-4 text-[#1e3a5f] py-3 bg-gray-200 border border-gray-300 rounded-lg"
+                />
               </div>
-              {/* Submit Button */}
+
               <AnimateButton
+                type="submit" // ← Important!
                 buttonText="Send Message"
                 icon="/svg/arrow-top-right.svg"
-                path="#"
                 parentclasName="inline-flex relative"
                 cicleClassName="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 bg-[#8BC500] w-[60px] h-[60px] rounded-full z-0"
-                linkClassName="flex items-center gap-2 text-[#003262] transition-colors mt-5 relative z-10 font-medium"
+                linkClassName="cursor-pointer flex items-center gap-2 text-[#003262] transition-colors mt-5 relative z-10 font-medium"
               />
+
+              {isSent && (
+                <p className="text-green-600 mt-4">
+                  Message sent successfully!
+                </p>
+              )}
             </form>
           </div>
         </div>
